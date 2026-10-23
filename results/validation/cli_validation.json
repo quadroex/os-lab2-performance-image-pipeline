@@ -1,0 +1,75 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "args": [
+        "--size",
+        "0"
+      ],
+      "exit_code": 2,
+      "message": "Error: --size must be in [1,65536]"
+    },
+    {
+      "args": [
+        "--width",
+        "abc"
+      ],
+      "exit_code": 2,
+      "message": "Error: invalid nonnegative integer for --width"
+    },
+    {
+      "args": [
+        "--height",
+        "65537"
+      ],
+      "exit_code": 2,
+      "message": "Error: --height must be in [1,65536]"
+    },
+    {
+      "args": [
+        "--size",
+        "65536"
+      ],
+      "exit_code": 2,
+      "message": "Error: image is too large; at most 100000000 pixels are allowed"
+    },
+    {
+      "args": [
+        "--repeats",
+        "0"
+      ],
+      "exit_code": 2,
+      "message": "Error: --repeats must be in [1,1000000]"
+    },
+    {
+      "args": [
+        "--seed",
+        "4294967296"
+      ],
+      "exit_code": 2,
+      "message": "Error: --seed must fit an unsigned 32-bit integer"
+    },
+    {
+      "args": [
+        "--seed",
+        "-1"
+      ],
+      "exit_code": 2,
+      "message": "Error: invalid nonnegative integer for --seed"
+    },
+    {
+      "args": [
+        "--width"
+      ],
+      "exit_code": 2,
+      "message": "Error: missing value for --width"
+    },
+    {
+      "args": [
+        "--unknown"
+      ],
+      "exit_code": 2,
+      "message": "Error: unknown option: --unknown"
+    }
+  ]
+}

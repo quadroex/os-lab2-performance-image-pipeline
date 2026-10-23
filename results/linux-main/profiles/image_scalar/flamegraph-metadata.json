@@ -1,0 +1,8 @@
+{
+  "event": "cpu-clock:u",
+  "count_units": "nanoseconds",
+  "total_folded_event_weight": 6015074625,
+  "folding": "stackcollapse-perf.pl sums sample periods when perf script includes a period field; otherwise counts samples.",
+  "raw_sample_count_source": "report.stdout.txt: Samples and --show-nr-samples columns",
+  "normalization": "Each SVG normalizes widths to its own total event-period weight."
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/usr/bin/time",
+    "--version"
+  ],
+  "shell_display": "/usr/bin/time --version",
+  "start_epoch_seconds": 1792784689.216023,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.2395504,
+  "wrapper_elapsed_seconds": 0.02352738380432129
+}

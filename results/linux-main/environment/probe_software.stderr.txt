@@ -1,0 +1,11 @@
+
+ Performance counter stats for 'sleep 0.1':
+
+              0.49 msec task-clock:u                     #    0.005 CPUs utilized             
+
+       0.101728217 seconds time elapsed
+
+       0.000941000 seconds user
+       0.000000000 seconds sys
+
+

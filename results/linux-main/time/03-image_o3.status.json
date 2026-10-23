@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/usr/bin/time",
+    "--verbose",
+    "--output",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/time/03-image_o3.time.txt",
+    "taskset",
+    "-c",
+    "0",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o3",
+    "--width",
+    "2048",
+    "--height",
+    "2048",
+    "--repeats",
+    "300",
+    "--seed",
+    "12345"
+  ],
+  "shell_display": "/usr/bin/time --verbose --output /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/time/03-image_o3.time.txt taskset -c 0 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o3 --width 2048 --height 2048 --repeats 300 --seed 12345",
+  "start_epoch_seconds": 1792784785.8573961,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784788.8105483,
+  "wrapper_elapsed_seconds": 2.9531521797180176
+}

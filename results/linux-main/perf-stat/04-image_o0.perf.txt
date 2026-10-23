@@ -1,0 +1,24 @@
+# started on Fri Oct 23 19:48:42 2026
+
+
+ Performance counter stats for 'taskset -c 0 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o0 --width 2048 --height 2048 --repeats 300 --seed 12345':
+
+          15883.20 msec task-clock                       #    0.982 CPUs utilized             
+                63      context-switches                 #    3.966 /sec                      
+                 1      cpu-migrations                   #    0.063 /sec                      
+             24775      page-faults                      #    1.560 K/sec                     
+       65089218942      cycles                           #    4.098 GHz                       
+      187755989645      instructions                     #    2.88  insn per cycle            
+       13887369513      branches                         #  874.343 M/sec                     
+         160215638      branch-misses                    #    1.15% of all branches           
+       72460013086      L1-dcache-loads                  #    4.562 G/sec                     
+         652550210      L1-dcache-load-misses            #    0.90% of all L1-dcache accesses 
+   <not supported>      LLC-loads                                                             
+   <not supported>      LLC-load-misses                                                       
+
+      16.167339734 seconds time elapsed
+
+      15.840118000 seconds user
+       0.043236000 seconds sys
+
+

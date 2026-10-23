@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "taskset",
+    "-c",
+    "0",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_scalar",
+    "--width",
+    "2048",
+    "--height",
+    "2048",
+    "--repeats",
+    "300",
+    "--seed",
+    "12345"
+  ],
+  "shell_display": "taskset -c 0 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_scalar --width 2048 --height 2048 --repeats 300 --seed 12345",
+  "start_epoch_seconds": 1792784705.122575,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784711.429016,
+  "wrapper_elapsed_seconds": 6.306441068649292
+}

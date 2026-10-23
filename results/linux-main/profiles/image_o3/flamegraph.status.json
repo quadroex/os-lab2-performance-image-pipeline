@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "bash",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/scripts/linux/render_flamegraph.sh",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_o3",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/tools/FlameGraph"
+  ],
+  "shell_display": "bash /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/scripts/linux/render_flamegraph.sh /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_o3 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/tools/FlameGraph",
+  "start_epoch_seconds": 1792784997.2854457,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784997.81099,
+  "wrapper_elapsed_seconds": 0.5255444049835205
+}

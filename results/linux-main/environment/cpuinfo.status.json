@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "cat",
+    "/proc/cpuinfo"
+  ],
+  "shell_display": "cat /proc/cpuinfo",
+  "start_epoch_seconds": 1792784689.0881963,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.0951588,
+  "wrapper_elapsed_seconds": 0.00696253776550293
+}

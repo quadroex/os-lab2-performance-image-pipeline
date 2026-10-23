@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "uname",
+    "-a"
+  ],
+  "shell_display": "uname -a",
+  "start_epoch_seconds": 1792784689.0459242,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.0506873,
+  "wrapper_elapsed_seconds": 0.004763126373291016
+}

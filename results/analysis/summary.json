@@ -1,0 +1,1133 @@
+{
+  "source_linux": "results\\linux-main",
+  "variants": {
+    "image_o0": {
+      "compute": {
+        "successful_runs": 5,
+        "compute_seconds_median": 15.848913596,
+        "compute_seconds_min": 15.624083021,
+        "compute_seconds_max": 15.984082815,
+        "compute_seconds_sample_stddev": 0.13981837956272786,
+        "speedup_vs_o0": 1.0
+      },
+      "time": {
+        "involuntary_switches": {
+          "n": 5,
+          "median": 54.0,
+          "min": 32.0,
+          "max": 311.0,
+          "sample_stddev": 118.6477981253761
+        },
+        "major_faults": {
+          "n": 5,
+          "median": 2.0,
+          "min": 2.0,
+          "max": 2.0,
+          "sample_stddev": 0.0
+        },
+        "max_rss_kib": {
+          "n": 5,
+          "median": 101888.0,
+          "min": 101760.0,
+          "max": 101888.0,
+          "sample_stddev": 70.10848736066126
+        },
+        "minor_faults": {
+          "n": 5,
+          "median": 24792.0,
+          "min": 24791.0,
+          "max": 24795.0,
+          "sample_stddev": 1.51657508881031
+        },
+        "system_seconds": {
+          "n": 5,
+          "median": 0.03,
+          "min": 0.01,
+          "max": 0.03,
+          "sample_stddev": 0.008944271909999158
+        },
+        "user_seconds": {
+          "n": 5,
+          "median": 15.71,
+          "min": 15.64,
+          "max": 15.87,
+          "sample_stddev": 0.08905054744357227
+        },
+        "voluntary_switches": {
+          "n": 5,
+          "median": 19.0,
+          "min": 19.0,
+          "max": 19.0,
+          "sample_stddev": 0.0
+        },
+        "wall_seconds": {
+          "n": 5,
+          "median": 15.83,
+          "min": 15.32,
+          "max": 16.2,
+          "sample_stddev": 0.3756727299126189
+        }
+      },
+      "perf": {
+        "L1-dcache-load-misses": {
+          "n": 5,
+          "median": 652597949.0,
+          "min": 651812700.0,
+          "max": 654359862.0,
+          "sample_stddev": 936805.0421852991
+        },
+        "L1-dcache-loads": {
+          "n": 5,
+          "median": 72460013086.0,
+          "min": 72459821852.0,
+          "max": 72460090556.0,
+          "sample_stddev": 115146.699606198
+        },
+        "LLC-load-misses": {
+          "n": 0,
+          "median": null
+        },
+        "LLC-loads": {
+          "n": 0,
+          "median": null
+        },
+        "branch-misses": {
+          "n": 5,
+          "median": 160215638.0,
+          "min": 160185660.0,
+          "max": 160280452.0,
+          "sample_stddev": 42573.40566950218
+        },
+        "branch_miss_fraction": {
+          "n": 5,
+          "median": 0.011536788003662014,
+          "min": 0.011534749207719176,
+          "max": 0.011541543212761263,
+          "sample_stddev": 3.0540022064948164e-06
+        },
+        "branches": {
+          "n": 5,
+          "median": 13887369513.0,
+          "min": 13887225211.0,
+          "max": 13887428450.0,
+          "sample_stddev": 85433.06246822713
+        },
+        "context-switches": {
+          "n": 5,
+          "median": 64.0,
+          "min": 60.0,
+          "max": 76.0,
+          "sample_stddev": 6.099180272790763
+        },
+        "cpu-migrations": {
+          "n": 5,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "sample_stddev": 0.0
+        },
+        "cycles": {
+          "n": 5,
+          "median": 65089218942.0,
+          "min": 64725010503.0,
+          "max": 65368882904.0,
+          "sample_stddev": 260186942.16653478
+        },
+        "instructions": {
+          "n": 5,
+          "median": 187755989645.0,
+          "min": 187755177331.0,
+          "max": 187756305122.0,
+          "sample_stddev": 478228.94392205076
+        },
+        "ipc": {
+          "n": 5,
+          "median": 2.884594295290384,
+          "min": 2.872258126205656,
+          "max": 2.9008133930283035,
+          "sample_stddev": 0.011542883117660106
+        },
+        "l1_load_miss_fraction": {
+          "n": 5,
+          "median": 0.009006308769316906,
+          "min": 0.00899550514119859,
+          "max": 0.009030631339346226,
+          "sample_stddev": 1.2921429306470482e-05
+        },
+        "page-faults": {
+          "n": 5,
+          "median": 24775.0,
+          "min": 24773.0,
+          "max": 24776.0,
+          "sample_stddev": 1.3416407864998738
+        },
+        "task-clock": {
+          "n": 5,
+          "median": 15910.29,
+          "min": 15847.27,
+          "max": 16039.84,
+          "sample_stddev": 73.27240906371216
+        }
+      },
+      "profile": {
+        "status": "ok",
+        "event": "cpu-clock:u",
+        "folded_weight_total": 15894470375,
+        "folded_weight_units": "nanoseconds",
+        "weighting": "stackcollapse-perf sums period values from this perf script output; folded values are not raw sample counts",
+        "raw_sample_count": 3163,
+        "raw_sample_count_source": "record.stderr.txt: exact perf record count",
+        "report_self_sample_count_sum": 3163,
+        "invalid_lines": 0,
+        "kernel_inclusive_weight": {
+          "rgb_to_grayscale": 3130652875,
+          "adjust_contrast": 7934672375,
+          "horizontal_blur_5tap": 4653265750
+        },
+        "kernel_inclusive_fractions": {
+          "rgb_to_grayscale": 0.19696490673411318,
+          "adjust_contrast": 0.4992096111286753,
+          "horizontal_blur_5tap": 0.29276003793866584
+        },
+        "top_leaf_symbols": [
+          {
+            "symbol": "adjust_contrast",
+            "event_period_weight": 4653265750,
+            "fraction": 0.29276003793866584
+          },
+          {
+            "symbol": "horizontal_blur_5tap",
+            "event_period_weight": 4603014500,
+            "fraction": 0.28959848245336706
+          },
+          {
+            "symbol": "rgb_to_grayscale",
+            "event_period_weight": 3130652875,
+            "fraction": 0.19696490673411318
+          },
+          {
+            "symbol": "int const& std::min<int>",
+            "event_period_weight": 1668341500,
+            "fraction": 0.10496364211191907
+          },
+          {
+            "symbol": "int const& std::max<int>",
+            "event_period_weight": 1613065125,
+            "fraction": 0.10148593107809042
+          },
+          {
+            "symbol": "main",
+            "event_period_weight": 90452250,
+            "fraction": 0.00569079987353778
+          },
+          {
+            "symbol": "__gnu_cxx::__enable_if<std::__is_scalar<unsigned int>::__value, void>::__type std::__fill_a1<unsigned int*, unsigned int>",
+            "event_period_weight": 50251250,
+            "fraction": 0.003161555485298767
+          },
+          {
+            "symbol": "blurred_edge",
+            "event_period_weight": 25125625,
+            "fraction": 0.0015807777426493834
+          },
+          {
+            "symbol": "unsigned long const& std::min<unsigned long>",
+            "event_period_weight": 25125625,
+            "fraction": 0.0015807777426493834
+          },
+          {
+            "symbol": "bool __gnu_cxx::operator!=<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > >",
+            "event_period_weight": 15075375,
+            "fraction": 0.0009484666455896301
+          },
+          {
+            "symbol": "__gnu_cxx::__normal_iterator<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > >::operator*",
+            "event_period_weight": 10050250,
+            "fraction": 0.0006323110970597534
+          },
+          {
+            "symbol": "__gnu_cxx::__normal_iterator<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > >::base",
+            "event_period_weight": 10050250,
+            "fraction": 0.0006323110970597534
+          }
+        ]
+      },
+      "energy": {
+        "dram_energy_window_seconds": {
+          "n": 3,
+          "median": 15.7187406,
+          "min": 15.7072328,
+          "max": 15.7643098,
+          "sample_stddev": 0.030184889648298893
+        },
+        "dram_incremental_estimate_joules": {
+          "n": 3,
+          "median": 9.065721345002125,
+          "min": 8.930448025342447,
+          "max": 9.414945227375952,
+          "sample_stddev": 0.24999790992802787
+        },
+        "dram_joules": {
+          "n": 3,
+          "median": 38.0438089992,
+          "min": 38.0180670012,
+          "max": 38.2014939996,
+          "sample_stddev": 0.09930816813855214
+        },
+        "dram_watts": {
+          "n": 3,
+          "median": 2.4186458679265948,
+          "min": 2.4132873231912764,
+          "max": 2.432095741243486,
+          "sample_stddev": 0.009689940518801956
+        },
+        "host_process_wall_seconds": {
+          "n": 3,
+          "median": 15.8688234,
+          "min": 15.8649461,
+          "max": 27.676991,
+          "sample_stddev": 6.818568298193313
+        },
+        "linux_child_wall_seconds": {
+          "n": 3,
+          "median": 16.038724498,
+          "min": 15.802361198,
+          "max": 16.14001736,
+          "sample_stddev": 0.17327220262523987
+        },
+        "package_energy_window_seconds": {
+          "n": 3,
+          "median": 15.7187404,
+          "min": 15.7072326,
+          "max": 15.7643098,
+          "sample_stddev": 0.030185003001048955
+        },
+        "package_incremental_estimate_joules": {
+          "n": 3,
+          "median": 239.1266047078005,
+          "min": 221.83538563585,
+          "max": 251.14929980487557,
+          "sample_stddev": 14.73565414394859
+        },
+        "package_joules": {
+          "n": 3,
+          "median": 486.9710520012,
+          "min": 484.3518339996,
+          "max": 500.9126630004,
+          "sample_stddev": 8.90215214977685
+        },
+        "package_watts": {
+          "n": 3,
+          "median": 30.98028465443707,
+          "min": 30.724582309312392,
+          "max": 31.890573964022156,
+          "sample_stddev": 0.6128549115002621
+        },
+        "synchronized_wall_seconds": {
+          "n": 3,
+          "median": 15.7188149,
+          "min": 15.7073029,
+          "max": 15.7656207,
+          "sample_stddev": 0.03088763197592167
+        }
+      }
+    },
+    "image_scalar": {
+      "compute": {
+        "successful_runs": 5,
+        "compute_seconds_median": 6.051008072,
+        "compute_seconds_min": 5.869608351,
+        "compute_seconds_max": 6.182020734,
+        "compute_seconds_sample_stddev": 0.11611266045683202,
+        "speedup_vs_o0": 2.619218716520661
+      },
+      "time": {
+        "involuntary_switches": {
+          "n": 5,
+          "median": 23.0,
+          "min": 16.0,
+          "max": 278.0,
+          "sample_stddev": 115.11385668111376
+        },
+        "major_faults": {
+          "n": 5,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "sample_stddev": 0.0
+        },
+        "max_rss_kib": {
+          "n": 5,
+          "median": 101760.0,
+          "min": 101760.0,
+          "max": 101760.0,
+          "sample_stddev": 0.0
+        },
+        "minor_faults": {
+          "n": 5,
+          "median": 24794.0,
+          "min": 24793.0,
+          "max": 24794.0,
+          "sample_stddev": 0.5477225575051661
+        },
+        "system_seconds": {
+          "n": 5,
+          "median": 0.03,
+          "min": 0.03,
+          "max": 0.03,
+          "sample_stddev": 0.0
+        },
+        "user_seconds": {
+          "n": 5,
+          "median": 5.97,
+          "min": 5.87,
+          "max": 6.01,
+          "sample_stddev": 0.06228964600958974
+        },
+        "voluntary_switches": {
+          "n": 5,
+          "median": 18.0,
+          "min": 18.0,
+          "max": 18.0,
+          "sample_stddev": 0.0
+        },
+        "wall_seconds": {
+          "n": 5,
+          "median": 6.05,
+          "min": 5.37,
+          "max": 6.25,
+          "sample_stddev": 0.3809461904258921
+        }
+      },
+      "perf": {
+        "L1-dcache-load-misses": {
+          "n": 5,
+          "median": 650350401.0,
+          "min": 650141145.0,
+          "max": 651130668.0,
+          "sample_stddev": 391794.7479973411
+        },
+        "L1-dcache-loads": {
+          "n": 5,
+          "median": 8870835110.0,
+          "min": 8870783711.0,
+          "max": 8871068667.0,
+          "sample_stddev": 111876.5800724173
+        },
+        "LLC-load-misses": {
+          "n": 0,
+          "median": null
+        },
+        "LLC-loads": {
+          "n": 0,
+          "median": null
+        },
+        "branch-misses": {
+          "n": 5,
+          "median": 230773118.0,
+          "min": 223670623.0,
+          "max": 231626176.0,
+          "sample_stddev": 3283820.229459539
+        },
+        "branch_miss_fraction": {
+          "n": 5,
+          "median": 0.0368592869281414,
+          "min": 0.03572377761915853,
+          "max": 0.03699535083619299,
+          "sample_stddev": 0.0005248938107501498
+        },
+        "branches": {
+          "n": 5,
+          "median": 6260962403.0,
+          "min": 6260921934.0,
+          "max": 6261113407.0,
+          "sample_stddev": 74047.33534030782
+        },
+        "context-switches": {
+          "n": 5,
+          "median": 35.0,
+          "min": 33.0,
+          "max": 36.0,
+          "sample_stddev": 1.3038404810405297
+        },
+        "cpu-migrations": {
+          "n": 5,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "sample_stddev": 0.0
+        },
+        "cycles": {
+          "n": 5,
+          "median": 24435527140.0,
+          "min": 24322466231.0,
+          "max": 25542481319.0,
+          "sample_stddev": 515778000.5202718
+        },
+        "instructions": {
+          "n": 5,
+          "median": 45615960078.0,
+          "min": 45615743247.0,
+          "max": 45616754317.0,
+          "sample_stddev": 391688.93438390625
+        },
+        "ipc": {
+          "n": 5,
+          "median": 1.8667795863641843,
+          "min": 1.7859171059887426,
+          "max": 1.8754660668357945,
+          "sample_stddev": 0.03776666095679428
+        },
+        "l1_load_miss_fraction": {
+          "n": 5,
+          "median": 0.07331332314664116,
+          "min": 0.07328982488260818,
+          "max": 0.07339934932779615,
+          "sample_stddev": 4.33927538731212e-05
+        },
+        "page-faults": {
+          "n": 5,
+          "median": 24773.0,
+          "min": 24772.0,
+          "max": 24774.0,
+          "sample_stddev": 0.8366600265340756
+        },
+        "task-clock": {
+          "n": 5,
+          "median": 5980.32,
+          "min": 5961.31,
+          "max": 6420.74,
+          "sample_stddev": 199.808090101477
+        }
+      },
+      "profile": {
+        "status": "ok",
+        "event": "cpu-clock:u",
+        "folded_weight_total": 6015074625,
+        "folded_weight_units": "nanoseconds",
+        "weighting": "stackcollapse-perf sums period values from this perf script output; folded values are not raw sample counts",
+        "raw_sample_count": 1197,
+        "raw_sample_count_source": "record.stderr.txt: exact perf record count",
+        "report_self_sample_count_sum": 1197,
+        "invalid_lines": 0,
+        "kernel_inclusive_weight": {
+          "rgb_to_grayscale": 1834170625,
+          "adjust_contrast": 2743718250,
+          "horizontal_blur_5tap": 1396984750
+        },
+        "kernel_inclusive_fractions": {
+          "rgb_to_grayscale": 0.30492898913951544,
+          "adjust_contrast": 0.45614035087719296,
+          "horizontal_blur_5tap": 0.2322472848788638
+        },
+        "top_leaf_symbols": [
+          {
+            "symbol": "adjust_contrast",
+            "event_period_weight": 2155778625,
+            "fraction": 0.3583959899749373
+          },
+          {
+            "symbol": "rgb_to_grayscale",
+            "event_period_weight": 1834170625,
+            "fraction": 0.30492898913951544
+          },
+          {
+            "symbol": "horizontal_blur_5tap",
+            "event_period_weight": 1396984750,
+            "fraction": 0.2322472848788638
+          },
+          {
+            "symbol": "int const& std::max<int>",
+            "event_period_weight": 371859250,
+            "fraction": 0.061821219715956555
+          },
+          {
+            "symbol": "int const& std::min<int>",
+            "event_period_weight": 216080375,
+            "fraction": 0.03592314118629908
+          },
+          {
+            "symbol": "initialize",
+            "event_period_weight": 10050250,
+            "fraction": 0.001670843776106934
+          },
+          {
+            "symbol": "next_random",
+            "event_period_weight": 10050250,
+            "fraction": 0.001670843776106934
+          },
+          {
+            "symbol": "[ld-linux-x86-64.so.2]",
+            "event_period_weight": 5025125,
+            "fraction": 0.000835421888053467
+          },
+          {
+            "symbol": "[libc.so.6]",
+            "event_period_weight": 5025125,
+            "fraction": 0.000835421888053467
+          },
+          {
+            "symbol": "main",
+            "event_period_weight": 5025125,
+            "fraction": 0.000835421888053467
+          },
+          {
+            "symbol": "std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_Vector_impl_data::_M_copy_data",
+            "event_period_weight": 5025125,
+            "fraction": 0.000835421888053467
+          }
+        ]
+      },
+      "energy": {
+        "dram_energy_window_seconds": {
+          "n": 3,
+          "median": 6.025031,
+          "min": 5.9583958,
+          "max": 6.2706036,
+          "sample_stddev": 0.16442823263795073
+        },
+        "dram_incremental_estimate_joules": {
+          "n": 3,
+          "median": 7.450301219049024,
+          "min": 7.42954837586645,
+          "max": 8.246635877207519,
+          "sample_stddev": 0.46587043140275936
+        },
+        "dram_joules": {
+          "n": 3,
+          "median": 18.8053850016,
+          "min": 18.3724070004,
+          "max": 20.7700120008,
+          "sample_stddev": 1.2777414275100056
+        },
+        "dram_watts": {
+          "n": 3,
+          "median": 3.121209667070593,
+          "min": 3.083448568555986,
+          "max": 3.312282728380407,
+          "sample_stddev": 0.12267836539904005
+        },
+        "host_process_wall_seconds": {
+          "n": 3,
+          "median": 17.9842419,
+          "min": 6.1193421,
+          "max": 18.3123693,
+          "sample_stddev": 6.9468629269454025
+        },
+        "linux_child_wall_seconds": {
+          "n": 3,
+          "median": 6.090971063,
+          "min": 6.036721124,
+          "max": 6.570299514,
+          "sample_stddev": 0.29365646541907786
+        },
+        "package_energy_window_seconds": {
+          "n": 3,
+          "median": 6.025031,
+          "min": 5.9583957,
+          "max": 6.2706036,
+          "sample_stddev": 0.16442827103799218
+        },
+        "package_incremental_estimate_joules": {
+          "n": 3,
+          "median": 69.59772671514571,
+          "min": 45.33637180217434,
+          "max": 154.61162104415607,
+          "sample_stddev": 57.3832955776251
+        },
+        "package_joules": {
+          "n": 3,
+          "median": 188.848314,
+          "min": 185.6543540004,
+          "max": 274.328101998,
+          "sample_stddev": 50.29915360554283
+        },
+        "package_watts": {
+          "n": 3,
+          "median": 31.343957234410908,
+          "min": 31.158446559767757,
+          "max": 43.74827680033865,
+          "sample_stddev": 7.2157857459699395
+        },
+        "synchronized_wall_seconds": {
+          "n": 3,
+          "median": 6.0254381,
+          "min": 5.9585095,
+          "max": 6.270675,
+          "sample_stddev": 0.1643511859858942
+        }
+      }
+    },
+    "image_o3": {
+      "compute": {
+        "successful_runs": 5,
+        "compute_seconds_median": 2.893787383,
+        "compute_seconds_min": 2.785030093,
+        "compute_seconds_max": 2.92655122,
+        "compute_seconds_sample_stddev": 0.056281632447001385,
+        "speedup_vs_o0": 5.4768756298776085
+      },
+      "time": {
+        "involuntary_switches": {
+          "n": 5,
+          "median": 11.0,
+          "min": 7.0,
+          "max": 19.0,
+          "sample_stddev": 4.560701700396552
+        },
+        "major_faults": {
+          "n": 5,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "sample_stddev": 0.0
+        },
+        "max_rss_kib": {
+          "n": 5,
+          "median": 101760.0,
+          "min": 101632.0,
+          "max": 101760.0,
+          "sample_stddev": 57.243340223994615
+        },
+        "minor_faults": {
+          "n": 5,
+          "median": 24792.0,
+          "min": 24790.0,
+          "max": 24793.0,
+          "sample_stddev": 1.224744871391589
+        },
+        "system_seconds": {
+          "n": 5,
+          "median": 0.03,
+          "min": 0.03,
+          "max": 0.07,
+          "sample_stddev": 0.017888543819998323
+        },
+        "user_seconds": {
+          "n": 5,
+          "median": 2.87,
+          "min": 2.79,
+          "max": 2.9,
+          "sample_stddev": 0.047644516998286326
+        },
+        "voluntary_switches": {
+          "n": 5,
+          "median": 18.0,
+          "min": 17.0,
+          "max": 18.0,
+          "sample_stddev": 0.4472135954999579
+        },
+        "wall_seconds": {
+          "n": 5,
+          "median": 2.96,
+          "min": 2.89,
+          "max": 2.99,
+          "sample_stddev": 0.039115214431215885
+        }
+      },
+      "perf": {
+        "L1-dcache-load-misses": {
+          "n": 5,
+          "median": 638996240.0,
+          "min": 638905431.0,
+          "max": 639197056.0,
+          "sample_stddev": 126102.15678052457
+        },
+        "L1-dcache-loads": {
+          "n": 5,
+          "median": 1491058440.0,
+          "min": 1491039524.0,
+          "max": 1491493789.0,
+          "sample_stddev": 193066.82301783495
+        },
+        "LLC-load-misses": {
+          "n": 0,
+          "median": null
+        },
+        "LLC-loads": {
+          "n": 0,
+          "median": null
+        },
+        "branch-misses": {
+          "n": 5,
+          "median": 746849.0,
+          "min": 742229.0,
+          "max": 755165.0,
+          "sample_stddev": 4696.151062306237
+        },
+        "branch_miss_fraction": {
+          "n": 5,
+          "median": 0.001428883837695438,
+          "min": 0.0014200130724486947,
+          "max": 0.0014446137049121876,
+          "sample_stddev": 8.90126435506161e-06
+        },
+        "branches": {
+          "n": 5,
+          "median": 522691667.0,
+          "min": 522679997.0,
+          "max": 523120922.0,
+          "sample_stddev": 189928.53244181085
+        },
+        "context-switches": {
+          "n": 5,
+          "median": 29.0,
+          "min": 26.0,
+          "max": 31.0,
+          "sample_stddev": 2.073644135332772
+        },
+        "cpu-migrations": {
+          "n": 5,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "sample_stddev": 0.0
+        },
+        "cycles": {
+          "n": 5,
+          "median": 11921476037.0,
+          "min": 11645869554.0,
+          "max": 12499588221.0,
+          "sample_stddev": 322194896.519303
+        },
+        "instructions": {
+          "n": 5,
+          "median": 8303438984.0,
+          "min": 8303390081.0,
+          "max": 8304774765.0,
+          "sample_stddev": 592579.7364234623
+        },
+        "ipc": {
+          "n": 5,
+          "median": 0.6966230305060337,
+          "min": 0.6643204271360933,
+          "max": 0.712994332067546,
+          "sample_stddev": 0.01826850392962804
+        },
+        "l1_load_miss_fraction": {
+          "n": 5,
+          "median": 0.42851414648348385,
+          "min": 0.42842702042254366,
+          "max": 0.42866283216340234,
+          "sample_stddev": 0.00010143729791912352
+        },
+        "page-faults": {
+          "n": 5,
+          "median": 24773.0,
+          "min": 24773.0,
+          "max": 24774.0,
+          "sample_stddev": 0.5477225575051661
+        },
+        "task-clock": {
+          "n": 5,
+          "median": 2924.35,
+          "min": 2841.09,
+          "max": 3091.05,
+          "sample_stddev": 93.75037290592506
+        }
+      },
+      "profile": {
+        "status": "ok",
+        "event": "cpu-clock:u",
+        "folded_weight_total": 2773869000,
+        "folded_weight_units": "nanoseconds",
+        "weighting": "stackcollapse-perf sums period values from this perf script output; folded values are not raw sample counts",
+        "raw_sample_count": 552,
+        "raw_sample_count_source": "record.stderr.txt: exact perf record count",
+        "report_self_sample_count_sum": 552,
+        "invalid_lines": 0,
+        "kernel_inclusive_weight": {
+          "rgb_to_grayscale": 1276381750,
+          "adjust_contrast": 728643125,
+          "horizontal_blur_5tap": 743718500
+        },
+        "kernel_inclusive_fractions": {
+          "rgb_to_grayscale": 0.4601449275362319,
+          "adjust_contrast": 0.26268115942028986,
+          "horizontal_blur_5tap": 0.26811594202898553
+        },
+        "top_leaf_symbols": [
+          {
+            "symbol": "rgb_to_grayscale",
+            "event_period_weight": 1276381750,
+            "fraction": 0.4601449275362319
+          },
+          {
+            "symbol": "horizontal_blur_5tap",
+            "event_period_weight": 738693375,
+            "fraction": 0.266304347826087
+          },
+          {
+            "symbol": "adjust_contrast",
+            "event_period_weight": 728643125,
+            "fraction": 0.26268115942028986
+          },
+          {
+            "symbol": "main",
+            "event_period_weight": 15075375,
+            "fraction": 0.005434782608695652
+          },
+          {
+            "symbol": "initialize",
+            "event_period_weight": 10050250,
+            "fraction": 0.0036231884057971015
+          },
+          {
+            "symbol": "blurred_edge",
+            "event_period_weight": 5025125,
+            "fraction": 0.0018115942028985507
+          }
+        ]
+      },
+      "energy": {
+        "dram_energy_window_seconds": {
+          "n": 3,
+          "median": 2.9597287,
+          "min": 2.8893007,
+          "max": 2.9885095,
+          "sample_stddev": 0.051040545370127026
+        },
+        "dram_incremental_estimate_joules": {
+          "n": 3,
+          "median": 6.909075137154048,
+          "min": 6.713072550389764,
+          "max": 7.044225958296178,
+          "sample_stddev": 0.1665059248403864
+        },
+        "dram_joules": {
+          "n": 3,
+          "median": 12.1311920016,
+          "min": 11.760067998,
+          "max": 12.3718370004,
+          "sample_stddev": 0.30819483929083846
+        },
+        "dram_watts": {
+          "n": 3,
+          "median": 4.070212559738071,
+          "min": 4.059278379941573,
+          "max": 4.1800577871884,
+          "sample_stddev": 0.06679969497975734
+        },
+        "host_process_wall_seconds": {
+          "n": 3,
+          "median": 3.1451433,
+          "min": 3.0554793,
+          "max": 15.1126066,
+          "sample_stddev": 6.935446827688275
+        },
+        "linux_child_wall_seconds": {
+          "n": 3,
+          "median": 2.959909894,
+          "min": 2.959291013,
+          "max": 2.963553184,
+          "sample_stddev": 0.002302993607948078
+        },
+        "package_energy_window_seconds": {
+          "n": 3,
+          "median": 2.9597286,
+          "min": 2.8893007,
+          "max": 2.9885095,
+          "sample_stddev": 0.051040531770773424
+        },
+        "package_incremental_estimate_joules": {
+          "n": 3,
+          "median": 57.53953928762757,
+          "min": 50.70542118801219,
+          "max": 75.99307365331319,
+          "sample_stddev": 13.081179024275517
+        },
+        "package_joules": {
+          "n": 3,
+          "median": 99.2747549988,
+          "min": 89.6870190024,
+          "max": 115.1078540004,
+          "sample_stddev": 12.837643589113696
+        },
+        "package_watts": {
+          "n": 3,
+          "median": 33.218818611351246,
+          "min": 31.041081671561564,
+          "max": 38.89135443040284,
+          "sample_stddev": 4.052714793517085
+        },
+        "synchronized_wall_seconds": {
+          "n": 3,
+          "median": 2.959576,
+          "min": 2.8893815,
+          "max": 2.9886129,
+          "sample_stddev": 0.051018428268322986
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "n": "available valid observations for each individual metric",
+    "range": "observed minimum/maximum, not a confidence interval",
+    "perf": "raw event counts; task-clock is milliseconds in these perf stat files",
+    "profile": "folded event-period weights, not raw sample counts; inclusive kernel memberships may overlap",
+    "energy": "named hardware domains, not whole-PC or exact per-PID energy"
+  },
+  "workload": {
+    "width": 2048,
+    "height": 2048,
+    "repeats": 300,
+    "seed": 12345
+  },
+  "checksum": "582320370857612868",
+  "source_energy": "results\\energy-sync-host-20261023T195827031Z",
+  "energy_raw_rows": [
+    {
+      "variant": "image_o0",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-01-image_o0.json",
+      "host_process_wall_seconds": 27.676991,
+      "synchronized_wall_seconds": 15.7656207,
+      "linux_child_wall_seconds": 16.14001736,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 484.3518339996,
+      "package_watts": 30.724582309312392,
+      "package_energy_window_seconds": 15.7643098,
+      "package_incremental_estimate_joules": 221.83538563585,
+      "dram_joules": 38.0438089992,
+      "dram_watts": 2.4132873231912764,
+      "dram_energy_window_seconds": 15.7643098,
+      "dram_incremental_estimate_joules": 9.065721345002125
+    },
+    {
+      "variant": "image_o3",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-01-image_o3.json",
+      "host_process_wall_seconds": 3.1451433,
+      "synchronized_wall_seconds": 2.959576,
+      "linux_child_wall_seconds": 2.963553184,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 115.1078540004,
+      "package_watts": 38.89135443040284,
+      "package_energy_window_seconds": 2.9597286,
+      "package_incremental_estimate_joules": 75.99307365331319,
+      "dram_joules": 12.3718370004,
+      "dram_watts": 4.1800577871884,
+      "dram_energy_window_seconds": 2.9597287,
+      "dram_incremental_estimate_joules": 7.044225958296178
+    },
+    {
+      "variant": "image_scalar",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-01-image_scalar.json",
+      "host_process_wall_seconds": 17.9842419,
+      "synchronized_wall_seconds": 6.0254381,
+      "linux_child_wall_seconds": 6.036721124,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 188.848314,
+      "package_watts": 31.343957234410908,
+      "package_energy_window_seconds": 6.025031,
+      "package_incremental_estimate_joules": 45.33637180217434,
+      "dram_joules": 18.8053850016,
+      "dram_watts": 3.121209667070593,
+      "dram_energy_window_seconds": 6.025031,
+      "dram_incremental_estimate_joules": 7.42954837586645
+    },
+    {
+      "variant": "image_o0",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-02-image_o0.json",
+      "host_process_wall_seconds": 15.8688234,
+      "synchronized_wall_seconds": 15.7073029,
+      "linux_child_wall_seconds": 16.038724498,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 500.9126630004,
+      "package_watts": 31.890573964022156,
+      "package_energy_window_seconds": 15.7072326,
+      "package_incremental_estimate_joules": 251.14929980487557,
+      "dram_joules": 38.2014939996,
+      "dram_watts": 2.432095741243486,
+      "dram_energy_window_seconds": 15.7072328,
+      "dram_incremental_estimate_joules": 9.414945227375952
+    },
+    {
+      "variant": "image_o3",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-02-image_o3.json",
+      "host_process_wall_seconds": 3.0554793,
+      "synchronized_wall_seconds": 2.8893815,
+      "linux_child_wall_seconds": 2.959909894,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 89.6870190024,
+      "package_watts": 31.041081671561564,
+      "package_energy_window_seconds": 2.8893007,
+      "package_incremental_estimate_joules": 50.70542118801219,
+      "dram_joules": 11.760067998,
+      "dram_watts": 4.070212559738071,
+      "dram_energy_window_seconds": 2.8893007,
+      "dram_incremental_estimate_joules": 6.713072550389764
+    },
+    {
+      "variant": "image_scalar",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-02-image_scalar.json",
+      "host_process_wall_seconds": 6.1193421,
+      "synchronized_wall_seconds": 5.9585095,
+      "linux_child_wall_seconds": 6.090971063,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 185.6543540004,
+      "package_watts": 31.158446559767757,
+      "package_energy_window_seconds": 5.9583957,
+      "package_incremental_estimate_joules": 69.59772671514571,
+      "dram_joules": 18.3724070004,
+      "dram_watts": 3.083448568555986,
+      "dram_energy_window_seconds": 5.9583958,
+      "dram_incremental_estimate_joules": 7.450301219049024
+    },
+    {
+      "variant": "image_o0",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-03-image_o0.json",
+      "host_process_wall_seconds": 15.8649461,
+      "synchronized_wall_seconds": 15.7188149,
+      "linux_child_wall_seconds": 15.802361198,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 486.9710520012,
+      "package_watts": 30.98028465443707,
+      "package_energy_window_seconds": 15.7187404,
+      "package_incremental_estimate_joules": 239.1266047078005,
+      "dram_joules": 38.0180670012,
+      "dram_watts": 2.4186458679265948,
+      "dram_energy_window_seconds": 15.7187406,
+      "dram_incremental_estimate_joules": 8.930448025342447
+    },
+    {
+      "variant": "image_o3",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-03-image_o3.json",
+      "host_process_wall_seconds": 15.1126066,
+      "synchronized_wall_seconds": 2.9886129,
+      "linux_child_wall_seconds": 2.959291013,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 99.2747549988,
+      "package_watts": 33.218818611351246,
+      "package_energy_window_seconds": 2.9885095,
+      "package_incremental_estimate_joules": 57.53953928762757,
+      "dram_joules": 12.1311920016,
+      "dram_watts": 4.059278379941573,
+      "dram_energy_window_seconds": 2.9885095,
+      "dram_incremental_estimate_joules": 6.909075137154048
+    },
+    {
+      "variant": "image_scalar",
+      "source": "results\\energy-sync-host-20261023T195827031Z\\run-03-image_scalar.json",
+      "host_process_wall_seconds": 18.3123693,
+      "synchronized_wall_seconds": 6.270675,
+      "linux_child_wall_seconds": 6.570299514,
+      "energy_window_scope": "GO through DONE, before ACK permits wrapper teardown",
+      "method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+      "package_joules": 274.328101998,
+      "package_watts": 43.74827680033865,
+      "package_energy_window_seconds": 6.2706036,
+      "package_incremental_estimate_joules": 154.61162104415607,
+      "dram_joules": 20.7700120008,
+      "dram_watts": 3.312282728380407,
+      "dram_energy_window_seconds": 6.2706036,
+      "dram_incremental_estimate_joules": 8.246635877207519
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "epoch_seconds": 1792784689.0272694,
+  "affinity_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "is_wsl": true,
+  "perf_event_paranoid": "2",
+  "perf_event_max_sample_rate": "100000",
+  "tools": {
+    "g++": "/usr/bin/g++",
+    "make": "/usr/bin/make",
+    "perf": "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+    "taskset": "/usr/bin/taskset",
+    "perl": "/usr/bin/perl",
+    "git": "/usr/bin/git"
+  },
+  "gnu_time_exists": true,
+  "powercap_zones": [],
+  "policy": "No sudo, package installation, sysctl, governor, affinity of other processes, or security changes.",
+  "uname": {
+    "argv": [
+      "uname",
+      "-a"
+    ],
+    "shell_display": "uname -a",
+    "start_epoch_seconds": 1792784689.0459242,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.0506873,
+    "wrapper_elapsed_seconds": 0.004763126373291016
+  },
+  "lscpu": {
+    "argv": [
+      "lscpu"
+    ],
+    "shell_display": "lscpu",
+    "start_epoch_seconds": 1792784689.0552037,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.0824842,
+    "wrapper_elapsed_seconds": 0.027280569076538086
+  },
+  "cpuinfo": {
+    "argv": [
+      "cat",
+      "/proc/cpuinfo"
+    ],
+    "shell_display": "cat /proc/cpuinfo",
+    "start_epoch_seconds": 1792784689.0881963,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.0951588,
+    "wrapper_elapsed_seconds": 0.00696253776550293
+  },
+  "memory": {
+    "argv": [
+      "cat",
+      "/proc/meminfo"
+    ],
+    "shell_display": "cat /proc/meminfo",
+    "start_epoch_seconds": 1792784689.0994372,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.1098552,
+    "wrapper_elapsed_seconds": 0.010417938232421875
+  },
+  "compiler": {
+    "argv": [
+      "g++",
+      "--version"
+    ],
+    "shell_display": "g++ --version",
+    "start_epoch_seconds": 1792784689.1169071,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.195503,
+    "wrapper_elapsed_seconds": 0.07859587669372559
+  },
+  "perf_version": {
+    "argv": [
+      "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+      "--version"
+    ],
+    "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf --version",
+    "start_epoch_seconds": 1792784689.20067,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.2117841,
+    "wrapper_elapsed_seconds": 0.011114120483398438
+  },
+  "time_version": {
+    "argv": [
+      "/usr/bin/time",
+      "--version"
+    ],
+    "shell_display": "/usr/bin/time --version",
+    "start_epoch_seconds": 1792784689.216023,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.2395504,
+    "wrapper_elapsed_seconds": 0.02352738380432129
+  },
+  "power_supply": {
+    "argv": [
+      "sh",
+      "-c",
+      "for f in /sys/class/power_supply/*/type /sys/class/power_supply/*/status; do [ ! -r \"$f\" ] || { echo \"$f\"; cat \"$f\"; }; done"
+    ],
+    "shell_display": "sh -c 'for f in /sys/class/power_supply/*/type /sys/class/power_supply/*/status; do [ ! -r \"$f\" ] || { echo \"$f\"; cat \"$f\"; }; done'",
+    "start_epoch_seconds": 1792784689.2438157,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.2485943,
+    "wrapper_elapsed_seconds": 0.004778623580932617
+  },
+  "perf_hardware_probe": {
+    "argv": [
+      "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+      "stat",
+      "-e",
+      "cycles:u,instructions:u",
+      "--",
+      "sleep",
+      "0.1"
+    ],
+    "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf stat -e cycles:u,instructions:u -- sleep 0.1",
+    "start_epoch_seconds": 1792784689.2536182,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.423613,
+    "wrapper_elapsed_seconds": 0.16999483108520508
+  },
+  "perf_software_probe": {
+    "argv": [
+      "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+      "stat",
+      "-e",
+      "task-clock:u",
+      "--",
+      "sleep",
+      "0.1"
+    ],
+    "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf stat -e task-clock:u -- sleep 0.1",
+    "start_epoch_seconds": 1792784689.4293327,
+    "returncode": 0,
+    "status": "ok",
+    "end_epoch_seconds": 1792784689.5480757,
+    "wrapper_elapsed_seconds": 0.1187429428100586
+  }
+}

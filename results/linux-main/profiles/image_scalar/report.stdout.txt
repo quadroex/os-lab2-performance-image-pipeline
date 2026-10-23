@@ -1,0 +1,63 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu-clock:u'
+# Event count (approx.): 6015074625
+#
+# Overhead       Samples  Command       Shared Object         Symbol                                                                            
+# ........  ............  ............  ....................  ..................................................................................
+#
+    45.61%           546  image_scalar  image_scalar          [.] adjust_contrast
+            |          
+            |--35.84%--adjust_contrast
+            |          pipeline (inlined)
+            |          main
+            |          0x7132de42a1c9
+            |          __libc_start_main
+            |          _start
+            |          
+            |--6.18%--int const& std::max<int>(int const&, int const&) (inlined)
+            |          adjust_contrast
+            |          pipeline (inlined)
+            |          main
+            |          0x7132de42a1c9
+            |          __libc_start_main
+            |          _start
+            |          
+             --3.59%--int const& std::min<int>(int const&, int const&) (inlined)
+                       adjust_contrast
+                       pipeline (inlined)
+                       main
+                       0x7132de42a1c9
+                       __libc_start_main
+                       _start
+
+    30.49%           365  image_scalar  image_scalar          [.] rgb_to_grayscale
+            |
+            ---rgb_to_grayscale
+               main
+               main
+               0x7132de42a1c9
+               __libc_start_main
+               _start
+
+    23.22%           278  image_scalar  image_scalar          [.] horizontal_blur_5tap
+            |
+            ---horizontal_blur_5tap
+               pipeline (inlined)
+               main
+               0x7132de42a1c9
+               __libc_start_main
+               _start
+
+     0.33%             4  image_scalar  image_scalar          [.] (anonymous namespace)::initialize((anonymous namespace)::Image&, unsigned int)
+     0.17%             2  image_scalar  image_scalar          [.] main
+     0.08%             1  image_scalar  ld-linux-x86-64.so.2  [.] 0x000000000000a87f
+     0.08%             1  image_scalar  libc.so.6             [.] 0x000000000018984a
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "taskset",
+    "-c",
+    "0",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o3",
+    "--width",
+    "2048",
+    "--height",
+    "2048",
+    "--repeats",
+    "300",
+    "--seed",
+    "12345"
+  ],
+  "shell_display": "taskset -c 0 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o3 --width 2048 --height 2048 --repeats 300 --seed 12345",
+  "start_epoch_seconds": 1792784711.438571,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784714.525002,
+  "wrapper_elapsed_seconds": 3.0864310264587402
+}

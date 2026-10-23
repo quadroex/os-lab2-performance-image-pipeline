@@ -1,0 +1,440 @@
+{
+  "SchemaVersion": 2,
+  "Status": "ok",
+  "Label": "image_o0-round-3",
+  "Method": "Windows EMI RAPL; synchronized Linux child via READY/GO/DONE/ACK/RESULT",
+  "Command": {
+    "FilePath": "wsl.exe",
+    "Arguments": [
+      "-d",
+      "Ubuntu-24.04",
+      "-u",
+      "root",
+      "--",
+      "python3",
+      "-u",
+      "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/scripts/linux/energy_child.py",
+      "--timeout",
+      "90",
+      "--control-timeout",
+      "30",
+      "--",
+      "taskset",
+      "-c",
+      "0",
+      "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o0",
+      "--width",
+      "2048",
+      "--height",
+      "2048",
+      "--repeats",
+      "300",
+      "--seed",
+      "12345"
+    ],
+    "TargetArguments": [
+      "taskset",
+      "-c",
+      "0",
+      "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o0",
+      "--width",
+      "2048",
+      "--height",
+      "2048",
+      "--repeats",
+      "300",
+      "--seed",
+      "12345"
+    ]
+  },
+  "Sources": [
+    "https://learn.microsoft.com/en-us/windows-hardware/drivers/powermeter/energy-meter-interface",
+    "https://learn.microsoft.com/en-us/windows/win32/api/emi/ns-emi-emi_channel_measurement_data"
+  ],
+  "ExitCode": 0,
+  "WrapperExitCode": 0,
+  "TimedOut": false,
+  "StandardOutput": "{\"width\":2048,\"height\":2048,\"repeats\":300,\"seed\":12345,\"pixels_per_repeat\":4194304,\"compute_seconds\":15.552270344,\"checksum\":\"582320370857612868\",\"build_variant\":\"O0\",\"compiler\":\"GCC 13.3.0\",\"compiled_isa\":\"AVX2-enabled\"}\n",
+  "StandardError": "",
+  "HostStandardError": "",
+  "ProcessWallSeconds": 15.8649461,
+  "ProcessWallScope": "Full WSL host process, including startup and teardown; not the energy window",
+  "FullHostProcessWallSeconds": 15.8649461,
+  "WslStartupToReadySeconds": 0.1327038,
+  "SynchronizedWallSeconds": 15.7188149,
+  "EnergyWindowScope": "GO through DONE, before ACK permits wrapper teardown",
+  "LinuxChildWallSeconds": 15.802361198,
+  "LinuxChildRealtimeSeconds": 15.260833634,
+  "ClockCrosscheck": {
+    "HostStopwatchFrequency": 10000000,
+    "GuestMonotonicSeconds": 15.802361198,
+    "GuestRealtimeSeconds": 15.260833634,
+    "HostQpcWindowSeconds": 15.7188149,
+    "ClockWarning": "Guest monotonic/realtime and host QPC/EMI are different clocks and scopes. Differences are diagnostic, not a proven overhead decomposition."
+  },
+  "WrapperReady": {
+    "type": "READY",
+    "protocol": 1,
+    "pid": 504,
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o0",
+      "--width",
+      "2048",
+      "--height",
+      "2048",
+      "--repeats",
+      "300",
+      "--seed",
+      "12345"
+    ]
+  },
+  "Completion": {
+    "type": "DONE",
+    "exit_code": 0,
+    "timed_out": false,
+    "child_wall_seconds": 15.802361198,
+    "child_realtime_seconds": 15.260833634,
+    "monotonic_start_ns": "229493619523",
+    "monotonic_end_ns": "245295980721",
+    "realtime_start_ns": "1792785684189167014",
+    "realtime_end_ns": "1792785699450000648"
+  },
+  "SettleSeconds": 5.0,
+  "RawSamples": {
+    "ActiveStart": {
+      "CaptureStartedUtc": "2026-10-23T20:01:24.1792694+00:00",
+      "CaptureFinishedUtc": "2026-10-23T20:01:24.1793169+00:00",
+      "ClockSemantics": "AbsoluteTime is a driver timestamp in 100 ns intervals, with unspecified epoch; only differences are used. UTC is a separate host capture clock.",
+      "Channels": [
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_DRAM",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "3767341750833",
+          "AbsoluteTime100ns": "71759546524"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PKG",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "44581164732777",
+          "AbsoluteTime100ns": "71759546522"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP0",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "40106338441388",
+          "AbsoluteTime100ns": "71759546527"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP1",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "0",
+          "AbsoluteTime100ns": "71759546530"
+        }
+      ]
+    },
+    "ActiveEnd": {
+      "CaptureStartedUtc": "2026-10-23T20:01:39.8979894+00:00",
+      "CaptureFinishedUtc": "2026-10-23T20:01:39.8980895+00:00",
+      "ClockSemantics": "AbsoluteTime is a driver timestamp in 100 ns intervals, with unspecified epoch; only differences are used. UTC is a separate host capture clock.",
+      "Channels": [
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_DRAM",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "3777902325000",
+          "AbsoluteTime100ns": "71916733930"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PKG",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "44716434469444",
+          "AbsoluteTime100ns": "71916733926"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP0",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "40231378935555",
+          "AbsoluteTime100ns": "71916733932"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP1",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "0",
+          "AbsoluteTime100ns": "71916733935"
+        }
+      ]
+    },
+    "IdleStart": {
+      "CaptureStartedUtc": "2026-10-23T20:01:44.9178317+00:00",
+      "CaptureFinishedUtc": "2026-10-23T20:01:44.9179484+00:00",
+      "ClockSemantics": "AbsoluteTime is a driver timestamp in 100 ns intervals, with unspecified epoch; only differences are used. UTC is a separate host capture clock.",
+      "Channels": [
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_DRAM",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "3780695498055",
+          "AbsoluteTime100ns": "71966932427"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PKG",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "44747471506666",
+          "AbsoluteTime100ns": "71966932423"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP0",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "40259251343611",
+          "AbsoluteTime100ns": "71966932430"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP1",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "0",
+          "AbsoluteTime100ns": "71966932433"
+        }
+      ]
+    },
+    "IdleEnd": {
+      "CaptureStartedUtc": "2026-10-23T20:02:00.6514020+00:00",
+      "CaptureFinishedUtc": "2026-10-23T20:02:00.6519238+00:00",
+      "ClockSemantics": "AbsoluteTime is a driver timestamp in 100 ns intervals, with unspecified epoch; only differences are used. UTC is a separate host capture clock.",
+      "Channels": [
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_DRAM",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "3788783047500",
+          "AbsoluteTime100ns": "72124268760"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PKG",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "44816382410277",
+          "AbsoluteTime100ns": "72124268745"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP0",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "40318367189166",
+          "AbsoluteTime100ns": "72124268773"
+        },
+        {
+          "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+          "Version": 2,
+          "Channel": "RAPL_Package0_PP1",
+          "HardwareOEM": "Microsoft",
+          "HardwareModel": "PPM",
+          "UnitCode": 0,
+          "Unit": "picowatt-hour",
+          "AbsoluteEnergyPWh": "0",
+          "AbsoluteTime100ns": "72124268785"
+        }
+      ]
+    }
+  },
+  "ActiveDomainMeasurements": [
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_DRAM",
+      "Status": "ok",
+      "EnergyJoules": 38.0180670012,
+      "DurationSeconds": 15.7187406,
+      "AverageWatts": 2.4186458679265948
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PKG",
+      "Status": "ok",
+      "EnergyJoules": 486.9710520012,
+      "DurationSeconds": 15.7187404,
+      "AverageWatts": 30.98028465443707
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PP0",
+      "Status": "ok",
+      "EnergyJoules": 450.1457790012,
+      "DurationSeconds": 15.7187405,
+      "AverageWatts": 28.637522134880975
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PP1",
+      "Status": "zero_delta_unavailable_or_inactive",
+      "EnergyJoules": 0.0,
+      "DurationSeconds": 15.7187405,
+      "AverageWatts": 0.0
+    }
+  ],
+  "IdleDomainMeasurements": [
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_DRAM",
+      "Status": "ok",
+      "EnergyJoules": 29.115178002,
+      "DurationSeconds": 15.7336333,
+      "AverageWatts": 1.8505056935577622
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PKG",
+      "Status": "ok",
+      "EnergyJoules": 248.0792529996,
+      "DurationSeconds": 15.7336322,
+      "AverageWatts": 15.767449616599018
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PP0",
+      "Status": "ok",
+      "EnergyJoules": 212.817043998,
+      "DurationSeconds": 15.7336343,
+      "AverageWatts": 13.526248286958086
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PP1",
+      "Status": "zero_delta_unavailable_or_inactive",
+      "EnergyJoules": 0.0,
+      "DurationSeconds": 15.7336352,
+      "AverageWatts": 0.0
+    }
+  ],
+  "IncrementalEstimates": [
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_DRAM",
+      "Status": "estimate",
+      "ActiveDomainEnergyJoules": 38.0180670012,
+      "IdleAverageWatts": 1.8505056935577622,
+      "ActiveDurationSeconds": 15.7187406,
+      "EstimatedIncrementalEnergyJoules": 8.930448025342447,
+      "Formula": "E_active_domain - P_idle_domain * T_active_domain",
+      "ExactPerProcessMeasurement": false,
+      "IncludeInNonOverlappingSummary": true
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PKG",
+      "Status": "estimate",
+      "ActiveDomainEnergyJoules": 486.9710520012,
+      "IdleAverageWatts": 15.767449616599018,
+      "ActiveDurationSeconds": 15.7187404,
+      "EstimatedIncrementalEnergyJoules": 239.1266047078005,
+      "Formula": "E_active_domain - P_idle_domain * T_active_domain",
+      "ExactPerProcessMeasurement": false,
+      "IncludeInNonOverlappingSummary": true
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PP0",
+      "Status": "estimate",
+      "ActiveDomainEnergyJoules": 450.1457790012,
+      "IdleAverageWatts": 13.526248286958086,
+      "ActiveDurationSeconds": 15.7187405,
+      "EstimatedIncrementalEnergyJoules": 237.53019223993635,
+      "Formula": "E_active_domain - P_idle_domain * T_active_domain",
+      "ExactPerProcessMeasurement": false,
+      "IncludeInNonOverlappingSummary": false
+    },
+    {
+      "Device": "\\\\?\\acpi#genuineintel_-_intel64_family_6_model_165_-_intel(r)_core(tm)_i5-10500_cpu_@_3.10ghz#_1#{45bd8344-7ed6-49cf-a440-c276c933b053}",
+      "Channel": "RAPL_Package0_PP1",
+      "Status": "unavailable",
+      "ActiveDomainEnergyJoules": 0.0,
+      "IdleAverageWatts": 0.0,
+      "ActiveDurationSeconds": 15.7187405,
+      "EstimatedIncrementalEnergyJoules": null,
+      "Formula": "E_active_domain - P_idle_domain * T_active_domain",
+      "ExactPerProcessMeasurement": false,
+      "IncludeInNonOverlappingSummary": false
+    }
+  ],
+  "Warnings": [
+    "CPU package and DRAM only; no wall-plug or whole-PC energy measurement.",
+    "The synchronized interval excludes WSL startup/teardown but includes the whole Linux child and small wrapper/pipe/sensor-boundary overhead.",
+    "The program compute_seconds excludes allocation, initialization and checksum; energy covers those operations.",
+    "Idle baseline follows the active interval after the configured settling time and matches its duration.",
+    "Other Windows/WSL activity, thermal drift and virtualization affect readings.",
+    "Baseline subtraction is an incremental estimate, not an exact per-PID measurement.",
+    "PP0/PP1 are subdomains and must never be added to PKG.",
+    "EMI time has an unspecified epoch; only differences in 100 ns units are used. Decreasing energy counters invalidate an interval."
+  ]
+}

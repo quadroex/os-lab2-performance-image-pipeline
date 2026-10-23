@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "lscpu"
+  ],
+  "shell_display": "lscpu",
+  "start_epoch_seconds": 1792784689.0552037,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.0824842,
+  "wrapper_elapsed_seconds": 0.027280569076538086
+}

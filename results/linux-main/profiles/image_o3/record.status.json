@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+    "record",
+    "-e",
+    "cpu-clock:u",
+    "-F",
+    "199",
+    "--call-graph",
+    "dwarf,16384",
+    "-o",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_o3/perf.data",
+    "--",
+    "taskset",
+    "-c",
+    "0",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o3",
+    "--width",
+    "2048",
+    "--height",
+    "2048",
+    "--repeats",
+    "300",
+    "--seed",
+    "12345"
+  ],
+  "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf record -e cpu-clock:u -F 199 --call-graph dwarf,16384 -o /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_o3/perf.data -- taskset -c 0 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_o3 --width 2048 --height 2048 --repeats 300 --seed 12345",
+  "start_epoch_seconds": 1792784992.4916108,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784996.7460718,
+  "wrapper_elapsed_seconds": 4.254461050033569
+}

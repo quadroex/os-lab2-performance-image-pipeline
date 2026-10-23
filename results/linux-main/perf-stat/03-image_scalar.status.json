@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+    "stat",
+    "-d",
+    "--no-big-num",
+    "-o",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/perf-stat/03-image_scalar.perf.txt",
+    "--",
+    "taskset",
+    "-c",
+    "0",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_scalar",
+    "--width",
+    "2048",
+    "--height",
+    "2048",
+    "--repeats",
+    "300",
+    "--seed",
+    "12345"
+  ],
+  "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf stat -d --no-big-num -o /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/perf-stat/03-image_scalar.perf.txt -- taskset -c 0 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_scalar --width 2048 --height 2048 --repeats 300 --seed 12345",
+  "start_epoch_seconds": 1792784904.467169,
+  "returncode": 0,
+  "status": "partial",
+  "end_epoch_seconds": 1792784911.0800252,
+  "wrapper_elapsed_seconds": 6.612856149673462,
+  "reason": "Some hardware counters were not supported or not counted; retain raw output and do not invent values."
+}

@@ -1,0 +1,10 @@
+{
+  "status": "unavailable",
+  "domains": [],
+  "runs": [],
+  "scope": "CPU package energy only; whole-system AC/DC input energy remains a separate measurement.",
+  "whole_system_status": "not_measured; use a real external meter and import_wattmeter.py",
+  "method": "Each workload window bracketed by two idle reference windows; arithmetic mean idle power is subtracted.",
+  "estimate": "Incremental package energy attributed to workload under idle-baseline assumption; not direct per-PID measurement.",
+  "reason": "No readable package domains. No sudo or permission changes attempted."
+}

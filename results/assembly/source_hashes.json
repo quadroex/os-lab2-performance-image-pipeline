@@ -1,0 +1,22 @@
+[
+  {
+    "path": "src/main.cpp",
+    "sha256": "ad12afe3b54d9c5b6cf0642e3048a01d5886cee9699047643afecf560578f6b3"
+  },
+  {
+    "path": "src/kernels.cpp",
+    "sha256": "a718d6f52eaa0eb7a36d92cf4076992e23c1cc649bf17fb1554d8820501dacfc"
+  },
+  {
+    "path": "src/kernels.hpp",
+    "sha256": "8e30df2b8e7d36c0ea6742a01ccf2e1d77e68cef971ef35605bdd1da095a0644"
+  },
+  {
+    "path": "Makefile",
+    "sha256": "3d712a2f147afaccbd3ac8a76e25e5c9284f6c4967ef3af40b9e820f62356766"
+  },
+  {
+    "path": "CMakeLists.txt",
+    "sha256": "c7ae14521764cf7f5bb6a9810d5c66cbb058a700f483aec302c43809cb224269"
+  }
+]

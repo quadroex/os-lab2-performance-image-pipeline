@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+    "report",
+    "--stdio",
+    "--show-nr-samples",
+    "-i",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_o0/perf.data"
+  ],
+  "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf report --stdio --show-nr-samples -i /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_o0/perf.data",
+  "start_epoch_seconds": 1792784981.788696,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784982.3158946,
+  "wrapper_elapsed_seconds": 0.5271985530853271
+}

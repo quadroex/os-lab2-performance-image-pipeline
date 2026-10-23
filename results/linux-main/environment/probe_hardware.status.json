@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+    "stat",
+    "-e",
+    "cycles:u,instructions:u",
+    "--",
+    "sleep",
+    "0.1"
+  ],
+  "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf stat -e cycles:u,instructions:u -- sleep 0.1",
+  "start_epoch_seconds": 1792784689.2536182,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.423613,
+  "wrapper_elapsed_seconds": 0.16999483108520508
+}

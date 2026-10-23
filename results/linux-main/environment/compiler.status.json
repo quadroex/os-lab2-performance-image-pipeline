@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "g++",
+    "--version"
+  ],
+  "shell_display": "g++ --version",
+  "start_epoch_seconds": 1792784689.1169071,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.195503,
+  "wrapper_elapsed_seconds": 0.07859587669372559
+}

@@ -1,0 +1,1 @@
+{"width":2048,"height":2048,"repeats":300,"seed":12345,"pixels_per_repeat":4194304,"compute_seconds":5.869608351,"checksum":"582320370857612868","build_variant":"O3-scalar","compiler":"GCC 13.3.0","compiled_isa":"AVX2-enabled"}

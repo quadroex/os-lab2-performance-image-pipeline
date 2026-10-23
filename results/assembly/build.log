@@ -1,0 +1,6 @@
+g++ -std=c++17 -Wall -Wextra -Wpedantic -g -fno-omit-frame-pointer -mavx2 -O0 -DPERFLAB_VARIANT='"O0"' src/main.cpp src/kernels.cpp -o "build/image_o0"
+g++ -std=c++17 -Wall -Wextra -Wpedantic -g -fno-omit-frame-pointer -mavx2 -O3 -DPERFLAB_VARIANT='"O3"' src/main.cpp src/kernels.cpp -o "build/image_o3"
+g++ -std=c++17 -Wall -Wextra -Wpedantic -g -fno-omit-frame-pointer -mavx2 -O3 -fno-tree-vectorize -fno-tree-slp-vectorize -DPERFLAB_VARIANT='"O3-scalar"' src/main.cpp src/kernels.cpp -o "build/image_scalar"
+g++ -std=c++17 -Wall -Wextra -Wpedantic -g -fno-omit-frame-pointer -mavx2 -O0 -S -masm=intel -fverbose-asm src/kernels.cpp -o "build/kernels_o0.s"
+g++ -std=c++17 -Wall -Wextra -Wpedantic -g -fno-omit-frame-pointer -mavx2 -O3 -S -masm=intel -fverbose-asm -fopt-info-vec-all=build/vectorization_o3.txt src/kernels.cpp -o "build/kernels_o3.s"
+g++ -std=c++17 -Wall -Wextra -Wpedantic -g -fno-omit-frame-pointer -mavx2 -O3 -fno-tree-vectorize -fno-tree-slp-vectorize -S -masm=intel -fverbose-asm src/kernels.cpp -o "build/kernels_scalar.s"

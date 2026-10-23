@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "bash",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/scripts/linux/render_flamegraph.sh",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_scalar",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/tools/FlameGraph",
+    "--reuse-folded"
+  ],
+  "shell_display": "bash /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/scripts/linux/render_flamegraph.sh /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_scalar /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/tools/FlameGraph --reuse-folded",
+  "start_epoch_seconds": 1792785158.3268416,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792785158.6447513,
+  "wrapper_elapsed_seconds": 0.31790971755981445
+}

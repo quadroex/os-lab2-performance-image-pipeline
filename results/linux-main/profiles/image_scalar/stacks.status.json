@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+    "script",
+    "-i",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_scalar/perf.data"
+  ],
+  "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf script -i /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_scalar/perf.data",
+  "start_epoch_seconds": 1792784991.5769086,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784991.848702,
+  "wrapper_elapsed_seconds": 0.2717933654785156
+}

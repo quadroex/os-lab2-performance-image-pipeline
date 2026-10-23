@@ -1,0 +1,105 @@
+{
+  "arguments": {
+    "mode": "collect",
+    "output": "results/linux-main",
+    "width": 2048,
+    "height": 2048,
+    "repeats": 300,
+    "seed": 12345,
+    "runs": 5,
+    "variants": [
+      "image_o0",
+      "image_scalar",
+      "image_o3"
+    ],
+    "cpu": 0,
+    "timeout": 600,
+    "profile_event": "cpu-clock:u",
+    "frequency": 199,
+    "profile_repeats": 300,
+    "flamegraph_dir": null,
+    "energy_runs": 3,
+    "idle_seconds": 3,
+    "skip_perf": false,
+    "skip_energy": false
+  },
+  "binary_sha256": {
+    "image_o0": "52a7cb61b198184ab846bbdc838a68c24cd0cfee7eb04b5a7ced8d484700368c",
+    "image_scalar": "6d007a08fcc8982842a9b15b66a4ae17142a39da5a82c7b0cd5513e9c96d917c",
+    "image_o3": "f3be92518830c5988f0e48a6ab90cd4045cb9e040c93dc9a88a5794721ce22d1"
+  },
+  "workload": {
+    "width": 2048,
+    "height": 2048,
+    "repeats": 300,
+    "seed": 12345
+  },
+  "run_order": [
+    [
+      1,
+      "image_o0"
+    ],
+    [
+      1,
+      "image_scalar"
+    ],
+    [
+      1,
+      "image_o3"
+    ],
+    [
+      2,
+      "image_o3"
+    ],
+    [
+      2,
+      "image_scalar"
+    ],
+    [
+      2,
+      "image_o0"
+    ],
+    [
+      3,
+      "image_o0"
+    ],
+    [
+      3,
+      "image_scalar"
+    ],
+    [
+      3,
+      "image_o3"
+    ],
+    [
+      4,
+      "image_o3"
+    ],
+    [
+      4,
+      "image_scalar"
+    ],
+    [
+      4,
+      "image_o0"
+    ],
+    [
+      5,
+      "image_o0"
+    ],
+    [
+      5,
+      "image_scalar"
+    ],
+    [
+      5,
+      "image_o3"
+    ]
+  ],
+  "affinity_cpu": 0,
+  "constant_work": true,
+  "notes": [
+    "Time, perf, sampling, and energy runs are separate instrumentation passes.",
+    "No governor/turbo/background-load settings were changed. Record environmental changes manually."
+  ]
+}

@@ -1,0 +1,8 @@
+make: Warning: File 'build' has modification time 0.44 s in the future
+"build/image_o0" --self-test
+{"status":"pass","cases":722,"build_variant":"O0"}
+"build/image_o3" --self-test
+{"status":"pass","cases":722,"build_variant":"O3"}
+"build/image_scalar" --self-test
+{"status":"pass","cases":722,"build_variant":"O3-scalar"}
+make: warning:  Clock skew detected.  Your build may be incomplete.

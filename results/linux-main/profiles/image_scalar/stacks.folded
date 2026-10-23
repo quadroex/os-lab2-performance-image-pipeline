@@ -1,0 +1,11 @@
+image_scalar;_start;__libc_start_main;[libc.so.6];exit;[libc.so.6];[ld-linux-x86-64.so.2];[ld-linux-x86-64.so.2];[libstdc++.so.6.0.33];__cxa_finalize;std::ios_base::Init::~Init;[ld-linux-x86-64.so.2];[ld-linux-x86-64.so.2];[ld-linux-x86-64.so.2];[ld-linux-x86-64.so.2] 5025125
+image_scalar;_start;__libc_start_main;[libc.so.6];main;Image;std::vector<unsigned int, std::allocator<unsigned int> >::vector;std::vector<unsigned int, std::allocator<unsigned int> >::_M_default_initialize;unsigned int* std::__uninitialized_default_n_a<unsigned int*, unsigned long, unsigned int>;unsigned int* std::__uninitialized_default_n<unsigned int*, unsigned long>;unsigned int* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned int*, unsigned long>;unsigned int* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned int*, unsigned long>;unsigned int* std::fill_n<unsigned int*, unsigned long, unsigned int>;unsigned int* std::__fill_n_a<unsigned int*, unsigned long, unsigned int>;void std::__fill_a<unsigned int*, unsigned int>;__gnu_cxx::__enable_if<std::__is_scalar<unsigned int>::__value, void>::__type std::__fill_a1<unsigned int*, unsigned int>;[libc.so.6] 5025125
+image_scalar;_start;__libc_start_main;[libc.so.6];main;initialize 10050250
+image_scalar;_start;__libc_start_main;[libc.so.6];main;initialize;next_random 10050250
+image_scalar;_start;__libc_start_main;[libc.so.6];main;main 5025125
+image_scalar;_start;__libc_start_main;[libc.so.6];main;main;rgb_to_grayscale 1834170625
+image_scalar;_start;__libc_start_main;[libc.so.6];main;pipeline;adjust_contrast 2155778625
+image_scalar;_start;__libc_start_main;[libc.so.6];main;pipeline;adjust_contrast;int const& std::max<int> 371859250
+image_scalar;_start;__libc_start_main;[libc.so.6];main;pipeline;adjust_contrast;int const& std::min<int> 216080375
+image_scalar;_start;__libc_start_main;[libc.so.6];main;pipeline;horizontal_blur_5tap 1396984750
+image_scalar;_start;__libc_start_main;[libc.so.6];main;pipeline;std::vector<unsigned int, std::allocator<unsigned int> >::swap;std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_Vector_impl_data::_M_swap_data;std::_Vector_base<unsigned int, std::allocator<unsigned int> >::_Vector_impl_data::_M_copy_data 5025125

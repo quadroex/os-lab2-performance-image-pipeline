@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "for f in /sys/class/power_supply/*/type /sys/class/power_supply/*/status; do [ ! -r \"$f\" ] || { echo \"$f\"; cat \"$f\"; }; done"
+  ],
+  "shell_display": "sh -c 'for f in /sys/class/power_supply/*/type /sys/class/power_supply/*/status; do [ ! -r \"$f\" ] || { echo \"$f\"; cat \"$f\"; }; done'",
+  "start_epoch_seconds": 1792784689.2438157,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.2485943,
+  "wrapper_elapsed_seconds": 0.004778623580932617
+}

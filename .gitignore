@@ -1,0 +1,11 @@
+build/
+.vs/
+out/
+__pycache__/
+*.pyc
+*.perf.data
+perf.data*
+*.etl
+*.zip
+third_party/FlameGraph/
+tools/FlameGraph/

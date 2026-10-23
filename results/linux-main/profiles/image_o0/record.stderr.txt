@@ -1,0 +1,2 @@
+[ perf record: Woken up 201 times to write data ]
+[ perf record: Captured and wrote 50.182 MB /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/profiles/image_o0/perf.data (3163 samples) ]

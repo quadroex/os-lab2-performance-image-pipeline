@@ -1,0 +1,73 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 3K of event 'cpu-clock:u'
+# Event count (approx.): 15894470375
+#
+# Overhead       Samples  Command   Shared Object  Symbol                                                                                                                                                                                                                                                                                                                                                  
+# ........  ............  ........  .............  ........................................................................................................................................................................................................................................................................................................................................................
+#
+    29.28%           926  image_o0  image_o0       [.] adjust_contrast
+            |
+            ---adjust_contrast
+               (anonymous namespace)::pipeline((anonymous namespace)::Image&, unsigned long, unsigned long, unsigned int)
+               main
+               0x705d26a2a1c9
+               __libc_start_main
+               _start
+
+    28.96%           916  image_o0  image_o0       [.] horizontal_blur_5tap
+            |
+            ---horizontal_blur_5tap
+               (anonymous namespace)::pipeline((anonymous namespace)::Image&, unsigned long, unsigned long, unsigned int)
+               main
+               0x705d26a2a1c9
+               __libc_start_main
+               _start
+
+    19.70%           623  image_o0  image_o0       [.] rgb_to_grayscale
+            |
+            ---rgb_to_grayscale
+               (anonymous namespace)::pipeline((anonymous namespace)::Image&, unsigned long, unsigned long, unsigned int)
+               main
+               0x705d26a2a1c9
+               __libc_start_main
+               _start
+
+    10.50%           332  image_o0  image_o0       [.] int const& std::min<int>(int const&, int const&)
+            |
+            ---int const& std::min<int>(int const&, int const&)
+               adjust_contrast
+               (anonymous namespace)::pipeline((anonymous namespace)::Image&, unsigned long, unsigned long, unsigned int)
+               main
+               0x705d26a2a1c9
+               __libc_start_main
+               _start
+
+    10.15%           321  image_o0  image_o0       [.] int const& std::max<int>(int const&, int const&)
+            |
+            ---int const& std::max<int>(int const&, int const&)
+               adjust_contrast
+               |          
+                --9.17%--(anonymous namespace)::pipeline((anonymous namespace)::Image&, unsigned long, unsigned long, unsigned int)
+                          main
+                          0x705d26a2a1c9
+                          __libc_start_main
+                          _start
+
+     0.44%            14  image_o0  image_o0       [.] (anonymous namespace)::next_random(unsigned int&)
+     0.32%            10  image_o0  image_o0       [.] __gnu_cxx::__enable_if<std::__is_scalar<unsigned int>::__value, void>::__type std::__fill_a1<unsigned int*, unsigned int>(unsigned int*, unsigned int*, unsigned int const&)
+     0.16%             5  image_o0  image_o0       [.] blurred_edge
+     0.16%             5  image_o0  image_o0       [.] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+     0.09%             3  image_o0  image_o0       [.] bool __gnu_cxx::operator!=<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > >(__gnu_cxx::__normal_iterator<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > > const&, __gnu_cxx::__normal_iterator<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > > const&)
+     0.06%             2  image_o0  image_o0       [.] (anonymous namespace)::checksum(std::vector<unsigned int, std::allocator<unsigned int> > const&)
+     0.06%             2  image_o0  image_o0       [.] (anonymous namespace)::initialize((anonymous namespace)::Image&, unsigned int)
+     0.06%             2  image_o0  image_o0       [.] __gnu_cxx::__normal_iterator<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > >::base() const
+     0.06%             2  image_o0  image_o0       [.] __gnu_cxx::__normal_iterator<unsigned int const*, std::vector<unsigned int, std::allocator<unsigned int> > >::operator*() const
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

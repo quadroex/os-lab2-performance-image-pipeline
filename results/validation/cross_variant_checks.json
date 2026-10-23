@@ -1,0 +1,150 @@
+{
+  "status": "pass",
+  "workloads": 4,
+  "variant_runs": [
+    {
+      "width": 1,
+      "height": 1,
+      "repeats": 1,
+      "seed": 0,
+      "pixels_per_repeat": 1,
+      "compute_seconds": 5e-07,
+      "checksum": "12638163011299821354",
+      "build_variant": "O0",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 3,
+      "height": 5,
+      "repeats": 4,
+      "seed": 1,
+      "pixels_per_repeat": 15,
+      "compute_seconds": 2.2e-06,
+      "checksum": "2524715855001628979",
+      "build_variant": "O0",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 67,
+      "height": 19,
+      "repeats": 7,
+      "seed": 4294967295,
+      "pixels_per_repeat": 1273,
+      "compute_seconds": 0.000101797,
+      "checksum": "4874125950127886291",
+      "build_variant": "O0",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 512,
+      "height": 333,
+      "repeats": 4,
+      "seed": 12345,
+      "pixels_per_repeat": 170496,
+      "compute_seconds": 0.007694122,
+      "checksum": "16816401641717615021",
+      "build_variant": "O0",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 1,
+      "height": 1,
+      "repeats": 1,
+      "seed": 0,
+      "pixels_per_repeat": 1,
+      "compute_seconds": 3e-07,
+      "checksum": "12638163011299821354",
+      "build_variant": "O3",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 3,
+      "height": 5,
+      "repeats": 4,
+      "seed": 1,
+      "pixels_per_repeat": 15,
+      "compute_seconds": 2.4e-06,
+      "checksum": "2524715855001628979",
+      "build_variant": "O3",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 67,
+      "height": 19,
+      "repeats": 7,
+      "seed": 4294967295,
+      "pixels_per_repeat": 1273,
+      "compute_seconds": 1.1699e-05,
+      "checksum": "4874125950127886291",
+      "build_variant": "O3",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 512,
+      "height": 333,
+      "repeats": 4,
+      "seed": 12345,
+      "pixels_per_repeat": 170496,
+      "compute_seconds": 0.001029876,
+      "checksum": "16816401641717615021",
+      "build_variant": "O3",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 1,
+      "height": 1,
+      "repeats": 1,
+      "seed": 0,
+      "pixels_per_repeat": 1,
+      "compute_seconds": 2e-07,
+      "checksum": "12638163011299821354",
+      "build_variant": "O3-scalar",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 3,
+      "height": 5,
+      "repeats": 4,
+      "seed": 1,
+      "pixels_per_repeat": 15,
+      "compute_seconds": 1.1e-06,
+      "checksum": "2524715855001628979",
+      "build_variant": "O3-scalar",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 67,
+      "height": 19,
+      "repeats": 7,
+      "seed": 4294967295,
+      "pixels_per_repeat": 1273,
+      "compute_seconds": 3.0399e-05,
+      "checksum": "4874125950127886291",
+      "build_variant": "O3-scalar",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    },
+    {
+      "width": 512,
+      "height": 333,
+      "repeats": 4,
+      "seed": 12345,
+      "pixels_per_repeat": 170496,
+      "compute_seconds": 0.00517938,
+      "checksum": "16816401641717615021",
+      "build_variant": "O3-scalar",
+      "compiler": "GCC 13.3.0",
+      "compiled_isa": "AVX2-enabled"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 552  of event 'cpu-clock:u'
+# Event count (approx.): 2773869000
+#
+# Overhead       Samples  Command   Shared Object  Symbol                                                                            
+# ........  ............  ........  .............  ..................................................................................
+#
+    46.01%           254  image_o3  image_o3       [.] rgb_to_grayscale
+            |
+            ---rgb_to_grayscale
+               main
+               main
+               0x71b93be2a1c9
+               __libc_start_main
+               _start
+
+    26.63%           147  image_o3  image_o3       [.] horizontal_blur_5tap
+            |
+            ---horizontal_blur_5tap
+               pipeline (inlined)
+               main
+               0x71b93be2a1c9
+               __libc_start_main
+               _start
+
+    26.27%           145  image_o3  image_o3       [.] adjust_contrast
+            |
+            ---adjust_contrast
+               pipeline (inlined)
+               main
+               0x71b93be2a1c9
+               __libc_start_main
+               _start
+
+     0.72%             4  image_o3  image_o3       [.] (anonymous namespace)::initialize((anonymous namespace)::Image&, unsigned int)
+            |
+            ---(anonymous namespace)::initialize((anonymous namespace)::Image&, unsigned int)
+
+     0.18%             1  image_o3  image_o3       [.] blurred_edge
+     0.18%             1  image_o3  image_o3       [.] main
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

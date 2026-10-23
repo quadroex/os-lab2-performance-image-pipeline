@@ -1,0 +1,24 @@
+{
+  "StartedUtc": "2026-10-23T19:51:34.4310938+00:00",
+  "Distro": "Ubuntu-24.04",
+  "LinuxUser": "root",
+  "LinuxProjectPath": "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab",
+  "Width": 2048,
+  "Height": 2048,
+  "Repeats": 300,
+  "Seed": 12345,
+  "Cpu": 0,
+  "Rounds": 3,
+  "Variants": [
+    "image_o0",
+    "image_scalar",
+    "image_o3"
+  ],
+  "Order": "Cyclic rotation between rounds; one active and one matched-duration idle interval per run",
+  "SettleSeconds": 5.0,
+  "Warmup": false,
+  "WarmupRepeats": 5,
+  "MeasurementScript": "Q:\\Documents\\CodexFiles\\2026-10-23\\x20\\outputs\\performance-lab\\scripts\\windows\\Measure-Energy.ps1",
+  "WholePcMeasurement": false,
+  "ExactPerPidMeasurement": false
+}

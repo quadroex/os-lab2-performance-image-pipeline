@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/usr/lib/linux-tools/6.8.0-147-generic/perf",
+    "stat",
+    "-e",
+    "task-clock:u",
+    "--",
+    "sleep",
+    "0.1"
+  ],
+  "shell_display": "/usr/lib/linux-tools/6.8.0-147-generic/perf stat -e task-clock:u -- sleep 0.1",
+  "start_epoch_seconds": 1792784689.4293327,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.5480757,
+  "wrapper_elapsed_seconds": 0.1187429428100586
+}

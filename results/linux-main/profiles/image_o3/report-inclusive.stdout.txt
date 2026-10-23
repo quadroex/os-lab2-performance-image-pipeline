@@ -1,0 +1,121 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 552  of event 'cpu-clock:u'
+# Event count (approx.): 2773869000
+#
+# Children      Self       Samples  Command   Shared Object     Symbol                                                                            
+# ........  ........  ............  ........  ................  ..................................................................................
+#
+   100.00%     0.00%             0  image_o3  image_o3          [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0x71b93be2a1c9
+               main
+               |          
+               |--53.08%--pipeline (inlined)
+               |          |          
+               |          |--26.81%--horizontal_blur_5tap
+               |          |          
+               |           --26.27%--adjust_contrast
+               |          
+                --46.20%--main
+                          |          
+                           --46.01%--rgb_to_grayscale
+
+   100.00%     0.00%             0  image_o3  libc.so.6         [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0x71b93be2a1c9
+               main
+               |          
+               |--53.08%--pipeline (inlined)
+               |          |          
+               |          |--26.81%--horizontal_blur_5tap
+               |          |          
+               |           --26.27%--adjust_contrast
+               |          
+                --46.20%--main
+                          |          
+                           --46.01%--rgb_to_grayscale
+
+   100.00%     0.18%             1  image_o3  image_o3          [.] main
+            |          
+             --99.82%--main
+                       |          
+                       |--53.08%--pipeline (inlined)
+                       |          |          
+                       |          |--26.81%--horizontal_blur_5tap
+                       |          |          
+                       |           --26.27%--adjust_contrast
+                       |          
+                        --46.01%--main
+                                  rgb_to_grayscale
+
+   100.00%     0.00%             0  image_o3  libc.so.6         [.] 0x000071b93be2a1c9
+            |
+            ---0x71b93be2a1c9
+               main
+               |          
+               |--53.08%--pipeline (inlined)
+               |          |          
+               |          |--26.81%--horizontal_blur_5tap
+               |          |          
+               |           --26.27%--adjust_contrast
+               |          
+                --46.20%--main
+                          |          
+                           --46.01%--rgb_to_grayscale
+
+    53.08%     0.00%             0  image_o3  image_o3          [.] pipeline (inlined)
+            |
+            ---pipeline (inlined)
+               |          
+               |--26.81%--horizontal_blur_5tap
+               |          
+                --26.27%--adjust_contrast
+
+    46.01%    46.01%           254  image_o3  image_o3          [.] rgb_to_grayscale
+            |
+            ---_start
+               __libc_start_main
+               0x71b93be2a1c9
+               main
+               main
+               rgb_to_grayscale
+
+    26.81%    26.63%           147  image_o3  image_o3          [.] horizontal_blur_5tap
+            |          
+             --26.63%--_start
+                       __libc_start_main
+                       0x71b93be2a1c9
+                       main
+                       pipeline (inlined)
+                       horizontal_blur_5tap
+
+    26.27%    26.27%           145  image_o3  image_o3          [.] adjust_contrast
+            |
+            ---_start
+               __libc_start_main
+               0x71b93be2a1c9
+               main
+               pipeline (inlined)
+               adjust_contrast
+
+     0.72%     0.72%             4  image_o3  image_o3          [.] (anonymous namespace)::initialize((anonymous namespace)::Image&, unsigned int)
+            |
+            ---_start
+               __libc_start_main
+               0x71b93be2a1c9
+               main
+
+     0.36%     0.00%             0  image_o3  image_o3          [.] initialize (inlined)
+     0.18%     0.18%             1  image_o3  image_o3          [.] blurred_edge
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

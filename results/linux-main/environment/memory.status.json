@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "cat",
+    "/proc/meminfo"
+  ],
+  "shell_display": "cat /proc/meminfo",
+  "start_epoch_seconds": 1792784689.0994372,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784689.1098552,
+  "wrapper_elapsed_seconds": 0.010417938232421875
+}

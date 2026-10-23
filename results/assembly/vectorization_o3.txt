@@ -1,0 +1,558 @@
+/usr/include/c++/13/bits/stl_algobase.h:238:7: note: ***** Analysis failed with vector mode V8SI
+/usr/include/c++/13/bits/stl_algobase.h:238:7: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/stl_algobase.h:238:7: note: ***** Re-trying analysis with vector mode V16QI
+/usr/include/c++/13/bits/stl_algobase.h:238:7: note: ***** Analysis failed with vector mode V16QI
+/usr/include/c++/13/bits/stl_algobase.h:238:7: note: ***** Re-trying analysis with vector mode V8QI
+/usr/include/c++/13/bits/stl_algobase.h:238:7: note: ***** Analysis failed with vector mode V8QI
+/usr/include/c++/13/bits/stl_algobase.h:238:7: note: ***** Re-trying analysis with vector mode V4QI
+src/kernels.cpp:28:22: note: ***** Analysis failed with vector mode V4QI
+src/kernels.cpp:12:31: optimized: loop vectorized using 32 byte vectors
+src/kernels.cpp:12:31: optimized: loop vectorized using 16 byte vectors
+src/kernels.cpp:7:6: note: vectorized 1 loops in function.
+src/kernels.cpp:7:6: note: ***** Analysis failed with vector mode V8SI
+src/kernels.cpp:7:6: note: ***** The result for vector mode V32QI would be the same
+src/kernels.cpp:7:6: note: ***** Re-trying analysis with vector mode V16QI
+src/kernels.cpp:7:6: note: ***** Analysis failed with vector mode V16QI
+src/kernels.cpp:7:6: note: ***** Re-trying analysis with vector mode V8QI
+src/kernels.cpp:7:6: note: ***** Analysis failed with vector mode V8QI
+src/kernels.cpp:7:6: note: ***** Re-trying analysis with vector mode V4QI
+src/kernels.cpp:7:6: note: ***** Analysis failed with vector mode V4QI
+src/kernels.cpp:21:31: optimized: loop vectorized using 32 byte vectors
+src/kernels.cpp:21:31: optimized: loop vectorized using 16 byte vectors
+src/kernels.cpp:18:6: note: vectorized 1 loops in function.
+src/kernels.cpp:18:6: note: ***** Analysis failed with vector mode V8SI
+src/kernels.cpp:18:6: note: ***** The result for vector mode V32QI would be the same
+src/kernels.cpp:18:6: note: ***** Re-trying analysis with vector mode V16QI
+src/kernels.cpp:18:6: note: ***** Analysis failed with vector mode V16QI
+src/kernels.cpp:18:6: note: ***** Re-trying analysis with vector mode V8QI
+src/kernels.cpp:18:6: note: ***** Analysis failed with vector mode V8QI
+src/kernels.cpp:18:6: note: ***** Re-trying analysis with vector mode V4QI
+src/kernels.cpp:18:6: note: ***** Analysis failed with vector mode V4QI
+src/kernels.cpp:41:31: missed: couldn't vectorize loop
+src/kernels.cpp:41:31: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+src/kernels.cpp:45:39: missed: couldn't vectorize loop
+src/kernels.cpp:46:38: missed: statement clobbers memory: _5 = blurred_edge (row_56, x_111, width_54(D));
+src/kernels.cpp:53:35: optimized: loop vectorized using 32 byte vectors
+src/kernels.cpp:53:35: optimized: loop vectorized using 16 byte vectors
+src/kernels.cpp:38:6: note: vectorized 1 loops in function.
+src/kernels.cpp:57:38: missed: statement clobbers memory: _40 = blurred_edge (row_56, _143, width_54(D));
+src/kernels.cpp:58:38: missed: statement clobbers memory: _44 = blurred_edge (row_56, _102, width_54(D));
+src/kernels.cpp:46:38: missed: statement clobbers memory: _290 = blurred_edge (row_56, 0, width_54(D));
+src/kernels.cpp:46:38: missed: statement clobbers memory: _326 = blurred_edge (row_56, 1, width_54(D));
+src/kernels.cpp:46:38: missed: statement clobbers memory: _333 = blurred_edge (row_56, 2, width_54(D));
+src/kernels.cpp:46:38: missed: statement clobbers memory: _5 = blurred_edge (row_56, 3, width_54(D));
+src/kernels.cpp:54:20: note: ***** Analysis succeeded with vector mode V8SI
+src/kernels.cpp:54:20: note: SLPing BB part
+src/kernels.cpp:50:16: note: Costing subgraph: 
+src/kernels.cpp:50:16: note: node 0xfbffae8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: *out_58 = _136;
+src/kernels.cpp:50:16: note: 	stmt 0 *out_58 = _136;
+src/kernels.cpp:50:16: note: 	stmt 1 MEM[(uint32_t *)out_58 + 4B] = _101;
+src/kernels.cpp:50:16: note: 	children 0xfbffb68
+src/kernels.cpp:50:16: note: node 0xfbffb68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _136 = _135 >> 4;
+src/kernels.cpp:50:16: note: 	stmt 0 _136 = _135 >> 4;
+src/kernels.cpp:50:16: note: 	stmt 1 _101 = _100 >> 4;
+src/kernels.cpp:50:16: note: 	children 0xfbffbe8 0xfc00468
+src/kernels.cpp:50:16: note: node 0xfbffbe8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _135 = _117 + _129;
+src/kernels.cpp:50:16: note: 	stmt 0 _135 = _117 + _129;
+src/kernels.cpp:50:16: note: 	stmt 1 _100 = _94 + _144;
+src/kernels.cpp:50:16: note: 	children 0xfbffce8 0xfc002e8
+src/kernels.cpp:50:16: note: node 0xfbffce8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _117 = _133 + _153;
+src/kernels.cpp:50:16: note: 	stmt 0 _117 = _133 + _153;
+src/kernels.cpp:50:16: note: 	stmt 1 _144 = _47 + _98;
+src/kernels.cpp:50:16: note: 	children 0xfbffde8 0xfbffe68
+src/kernels.cpp:50:16: note: node 0xfbffde8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _133 = MEM[(const uint32_t *)row_56 + 8B];
+src/kernels.cpp:50:16: note: 	stmt 0 _133 = MEM[(const uint32_t *)row_56 + 8B];
+src/kernels.cpp:50:16: note: 	stmt 1 _98 = MEM[(const uint32_t *)row_56 + 12B];
+src/kernels.cpp:50:16: note: node 0xfbffe68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _153 = _46 + _123;
+src/kernels.cpp:50:16: note: 	stmt 0 _153 = _46 + _123;
+src/kernels.cpp:50:16: note: 	stmt 1 _47 = _49 + _83;
+src/kernels.cpp:50:16: note: 	children 0xfbffee8 0xfc00168
+src/kernels.cpp:50:16: note: node 0xfbffee8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _46 = _48 + _118;
+src/kernels.cpp:50:16: note: 	stmt 0 _46 = _48 + _118;
+src/kernels.cpp:50:16: note: 	stmt 1 _49 = _48 + _123;
+src/kernels.cpp:50:16: note: 	children 0xfbfff68 0xfbfffe8
+src/kernels.cpp:50:16: note: node (external) 0xfbfff68 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: 	{ _48, _48 }
+src/kernels.cpp:50:16: note: node (external) 0xfbfffe8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: 	stmt 0 _118 = _114 * 6;
+src/kernels.cpp:50:16: note: 	stmt 1 _123 = _114 * 4;
+src/kernels.cpp:50:16: note: 	children 0xfc00068 0xfc000e8
+src/kernels.cpp:50:16: note: node 0xfc00068 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _114 = *row_56;
+src/kernels.cpp:50:16: note: 	stmt 0 _114 = *row_56;
+src/kernels.cpp:50:16: note: 	stmt 1 _114 = *row_56;
+src/kernels.cpp:50:16: note: 	load permutation { 0 0 }
+src/kernels.cpp:50:16: note: node (constant) 0xfc000e8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:50:16: note: 	{ 6, 4 }
+src/kernels.cpp:50:16: note: node (external) 0xfc00168 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: 	stmt 0 _123 = _114 * 4;
+src/kernels.cpp:50:16: note: 	stmt 1 _83 = _128 * 6;
+src/kernels.cpp:50:16: note: 	children 0xfc001e8 0xfc00268
+src/kernels.cpp:50:16: note: node 0xfc001e8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _114 = *row_56;
+src/kernels.cpp:50:16: note: 	stmt 0 _114 = *row_56;
+src/kernels.cpp:50:16: note: 	stmt 1 _128 = MEM[(const uint32_t *)row_56 + 4B];
+src/kernels.cpp:50:16: note: node (constant) 0xfc00268 (max_nunits=1, refcnt=1)
+src/kernels.cpp:50:16: note: 	{ 4, 6 }
+src/kernels.cpp:50:16: note: node (external) 0xfc002e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:50:16: note: 	stmt 0 _129 = _128 * 4;
+src/kernels.cpp:50:16: note: 	stmt 1 _94 = _133 * 4;
+src/kernels.cpp:50:16: note: 	children 0xfc00368 0xfc003e8
+src/kernels.cpp:50:16: note: node 0xfc00368 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:50:16: note: op template: _128 = MEM[(const uint32_t *)row_56 + 4B];
+src/kernels.cpp:50:16: note: 	stmt 0 _128 = MEM[(const uint32_t *)row_56 + 4B];
+src/kernels.cpp:50:16: note: 	stmt 1 _133 = MEM[(const uint32_t *)row_56 + 8B];
+src/kernels.cpp:50:16: note: node (constant) 0xfc003e8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:50:16: note: 	{ 4, 4 }
+src/kernels.cpp:50:16: note: node (constant) 0xfc00468 (max_nunits=1, refcnt=1)
+src/kernels.cpp:50:16: note: 	{ 4, 4 }
+src/kernels.cpp:50:16: note: Cost model analysis: 
+src/kernels.cpp:50:16: note: Cost model analysis for part in loop 1:
+  Vector cost: 96
+  Scalar cost: 76
+src/kernels.cpp:50:16: missed: not vectorized: vectorization is not profitable.
+src/kernels.cpp:54:20: note: Costing subgraph: 
+src/kernels.cpp:54:20: note: node 0xfc00568 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: *_425 = _426;
+src/kernels.cpp:54:20: note: 	stmt 0 *_425 = _426;
+src/kernels.cpp:54:20: note: 	stmt 1 *_453 = _454;
+src/kernels.cpp:54:20: note: 	children 0xfc005e8
+src/kernels.cpp:54:20: note: node 0xfc005e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _426 = _424 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 0 _426 = _424 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _454 = _452 >> 4;
+src/kernels.cpp:54:20: note: 	children 0xfc00668 0xfc00be8
+src/kernels.cpp:54:20: note: node 0xfc00668 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _424 = _423 + _416;
+src/kernels.cpp:54:20: note: 	stmt 0 _424 = _423 + _416;
+src/kernels.cpp:54:20: note: 	stmt 1 _452 = _451 + _444;
+src/kernels.cpp:54:20: note: 	children 0xfc00968 0xfc00868
+src/kernels.cpp:54:20: note: node (external) 0xfc00968 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ _423, _451 }
+src/kernels.cpp:54:20: note: node (external) 0xfc00868 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _416 = _415 * 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _444 = _443 * 4;
+src/kernels.cpp:54:20: note: 	children 0xfc009e8 0xfc00b68
+src/kernels.cpp:54:20: note: node 0xfc009e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _415 = _224 + _233;
+src/kernels.cpp:54:20: note: 	stmt 0 _415 = _224 + _233;
+src/kernels.cpp:54:20: note: 	stmt 1 _443 = _230 + _421;
+src/kernels.cpp:54:20: note: 	children 0xfc00a68 0xfc00ae8
+src/kernels.cpp:54:20: note: node 0xfc00a68 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _224 = MEM[(const uint32_t *)_9 + -4B];
+src/kernels.cpp:54:20: note: 	stmt 0 _224 = MEM[(const uint32_t *)_9 + -4B];
+src/kernels.cpp:54:20: note: 	stmt 1 _230 = *_9;
+src/kernels.cpp:54:20: note: node 0xfc00ae8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _233 = MEM[(const uint32_t *)_9 + 4B];
+src/kernels.cpp:54:20: note: 	stmt 0 _233 = MEM[(const uint32_t *)_9 + 4B];
+src/kernels.cpp:54:20: note: 	stmt 1 _421 = *_420;
+src/kernels.cpp:54:20: note: node (constant) 0xfc00b68 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc00be8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: Cost model analysis: 
+src/kernels.cpp:54:20: note: Cost model analysis for part in loop 1:
+  Vector cost: 52
+  Scalar cost: 40
+src/kernels.cpp:54:20: missed: not vectorized: vectorization is not profitable.
+src/kernels.cpp:54:20: note: Costing subgraph: 
+src/kernels.cpp:54:20: note: node 0xfc00ce8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: *_516 = _517;
+src/kernels.cpp:54:20: note: 	stmt 0 *_516 = _517;
+src/kernels.cpp:54:20: note: 	stmt 1 *_544 = _545;
+src/kernels.cpp:54:20: note: 	children 0xfc00d68
+src/kernels.cpp:54:20: note: node 0xfc00d68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _517 = _515 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 0 _517 = _515 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _545 = _543 >> 4;
+src/kernels.cpp:54:20: note: 	children 0xfc00de8 0xfc015e8
+src/kernels.cpp:54:20: note: node 0xfc00de8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _515 = _514 + _507;
+src/kernels.cpp:54:20: note: 	stmt 0 _515 = _514 + _507;
+src/kernels.cpp:54:20: note: 	stmt 1 _543 = _542 + _535;
+src/kernels.cpp:54:20: note: 	children 0xfc00e68 0xfc012e8
+src/kernels.cpp:54:20: note: node 0xfc00e68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _514 = _512 + _508;
+src/kernels.cpp:54:20: note: 	stmt 0 _514 = _512 + _508;
+src/kernels.cpp:54:20: note: 	stmt 1 _542 = _540 + _536;
+src/kernels.cpp:54:20: note: 	children 0xfc00ee8 0xfc00f68
+src/kernels.cpp:54:20: note: node 0xfc00ee8 (max_nunits=2, refcnt=2) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 0 _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 1 _540 = *_539;
+src/kernels.cpp:54:20: note: node 0xfc00f68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _508 = _501 + 8;
+src/kernels.cpp:54:20: note: 	stmt 0 _508 = _501 + 8;
+src/kernels.cpp:54:20: note: 	stmt 1 _536 = _529 + 8;
+src/kernels.cpp:54:20: note: 	children 0xfc00fe8 0xfc01268
+src/kernels.cpp:54:20: note: node 0xfc00fe8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _501 = _494 + _497;
+src/kernels.cpp:54:20: note: 	stmt 0 _501 = _494 + _497;
+src/kernels.cpp:54:20: note: 	stmt 1 _529 = _522 + _525;
+src/kernels.cpp:54:20: note: 	children 0xfc01068 0xfc010e8
+src/kernels.cpp:54:20: note: node 0xfc01068 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _494 = *_493;
+src/kernels.cpp:54:20: note: 	stmt 0 _494 = *_493;
+src/kernels.cpp:54:20: note: 	stmt 1 _522 = *_521;
+src/kernels.cpp:54:20: note: node (external) 0xfc010e8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _497 = _449 * 6;
+src/kernels.cpp:54:20: note: 	stmt 1 _525 = _477 * 6;
+src/kernels.cpp:54:20: note: 	children 0xfc01168 0xfc011e8
+src/kernels.cpp:54:20: note: node 0xfc01168 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _449 = *_448;
+src/kernels.cpp:54:20: note: 	stmt 0 _449 = *_448;
+src/kernels.cpp:54:20: note: 	stmt 1 _477 = *_476;
+src/kernels.cpp:54:20: note: node (constant) 0xfc011e8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 6, 6 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01268 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ 8, 8 }
+src/kernels.cpp:54:20: note: node (external) 0xfc012e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _507 = _506 * 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _535 = _534 * 4;
+src/kernels.cpp:54:20: note: 	children 0xfc01368 0xfc01568
+src/kernels.cpp:54:20: note: node 0xfc01368 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _506 = _421 + _477;
+src/kernels.cpp:54:20: note: 	stmt 0 _506 = _421 + _477;
+src/kernels.cpp:54:20: note: 	stmt 1 _534 = _449 + _512;
+src/kernels.cpp:54:20: note: 	children 0xfc01468 0xfc01e68
+src/kernels.cpp:54:20: note: node (external) 0xfc01468 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ _421, _512 }
+src/kernels.cpp:54:20: note: node 0xfc01e68 (max_nunits=1, refcnt=2) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op: VEC_PERM_EXPR
+src/kernels.cpp:54:20: note: 	stmt 0 _477 = *_476;
+src/kernels.cpp:54:20: note: 	stmt 1 _449 = *_448;
+src/kernels.cpp:54:20: note: 	lane permutation { 0[1] 0[0] }
+src/kernels.cpp:54:20: note: 	children 0xfc014e8
+src/kernels.cpp:54:20: note: node 0xfc014e8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _477 = *_476;
+src/kernels.cpp:54:20: note: 	stmt 0 _449 = *_448;
+src/kernels.cpp:54:20: note: 	stmt 1 _477 = *_476;
+src/kernels.cpp:54:20: note: node (constant) 0xfc01568 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc015e8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: Cost model analysis: 
+src/kernels.cpp:54:20: note: Cost model analysis for part in loop 1:
+  Vector cost: 108
+  Scalar cost: 112
+src/kernels.cpp:54:20: note: Costing subgraph: 
+src/kernels.cpp:54:20: note: node 0xfc016e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: *_205 = _206;
+src/kernels.cpp:54:20: note: 	stmt 0 *_205 = _206;
+src/kernels.cpp:54:20: note: 	stmt 1 *_287 = _288;
+src/kernels.cpp:54:20: note: 	children 0xfc01768
+src/kernels.cpp:54:20: note: node 0xfc01768 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _206 = _204 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 0 _206 = _204 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _288 = _286 >> 4;
+src/kernels.cpp:54:20: note: 	children 0xfc017e8 0xfc01fe8
+src/kernels.cpp:54:20: note: node 0xfc017e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _204 = _203 + _197;
+src/kernels.cpp:54:20: note: 	stmt 0 _204 = _203 + _197;
+src/kernels.cpp:54:20: note: 	stmt 1 _286 = _285 + _278;
+src/kernels.cpp:54:20: note: 	children 0xfc01868 0xfc01ce8
+src/kernels.cpp:54:20: note: node 0xfc01868 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _203 = _202 + _198;
+src/kernels.cpp:54:20: note: 	stmt 0 _203 = _202 + _198;
+src/kernels.cpp:54:20: note: 	stmt 1 _285 = _283 + _279;
+src/kernels.cpp:54:20: note: 	children 0xfc018e8 0xfc01968
+src/kernels.cpp:54:20: note: node 0xfc018e8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _202 = *_201;
+src/kernels.cpp:54:20: note: 	stmt 0 _202 = *_201;
+src/kernels.cpp:54:20: note: 	stmt 1 _283 = *_282;
+src/kernels.cpp:54:20: note: node 0xfc01968 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _198 = _82 + 8;
+src/kernels.cpp:54:20: note: 	stmt 0 _198 = _82 + 8;
+src/kernels.cpp:54:20: note: 	stmt 1 _279 = _272 + 8;
+src/kernels.cpp:54:20: note: 	children 0xfc019e8 0xfc01c68
+src/kernels.cpp:54:20: note: node 0xfc019e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _82 = _165 + _161;
+src/kernels.cpp:54:20: note: 	stmt 0 _82 = _165 + _161;
+src/kernels.cpp:54:20: note: 	stmt 1 _272 = _91 + _71;
+src/kernels.cpp:54:20: note: 	children 0xfc01a68 0xfc01ae8
+src/kernels.cpp:54:20: note: node 0xfc01a68 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _165 = *_6;
+src/kernels.cpp:54:20: note: 	stmt 0 _165 = *_6;
+src/kernels.cpp:54:20: note: 	stmt 1 _91 = *_116;
+src/kernels.cpp:54:20: note: node (external) 0xfc01ae8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _161 = _540 * 6;
+src/kernels.cpp:54:20: note: 	stmt 1 _71 = _568 * 6;
+src/kernels.cpp:54:20: note: 	children 0xfc01b68 0xfc01be8
+src/kernels.cpp:54:20: note: node 0xfc01b68 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _540 = *_539;
+src/kernels.cpp:54:20: note: 	stmt 0 _540 = *_539;
+src/kernels.cpp:54:20: note: 	stmt 1 _568 = *_567;
+src/kernels.cpp:54:20: note: node (constant) 0xfc01be8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 6, 6 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01c68 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ 8, 8 }
+src/kernels.cpp:54:20: note: node (external) 0xfc01ce8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _197 = _196 * 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _278 = _277 * 4;
+src/kernels.cpp:54:20: note: 	children 0xfc01d68 0xfc01f68
+src/kernels.cpp:54:20: note: node 0xfc01d68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _196 = _512 + _568;
+src/kernels.cpp:54:20: note: 	stmt 0 _196 = _512 + _568;
+src/kernels.cpp:54:20: note: 	stmt 1 _277 = _202 + _540;
+src/kernels.cpp:54:20: note: 	children 0xfc00ee8 0xfc01ee8
+src/kernels.cpp:54:20: note: node 0xfc00ee8 (max_nunits=2, refcnt=2) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 0 _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 1 _540 = *_539;
+src/kernels.cpp:54:20: note: node (external) 0xfc01ee8 (max_nunits=1, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ _568, _202 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01f68 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01fe8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: Cost model analysis: 
+src/kernels.cpp:54:20: note: Cost model analysis for part in loop 1:
+  Vector cost: 108
+  Scalar cost: 112
+src/kernels.cpp:54:20: note: Basic block will be vectorized using SLP
+src/kernels.cpp:54:20: note: Vectorizing SLP tree:
+src/kernels.cpp:54:20: note: node 0xfc00ce8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: *_516 = _517;
+src/kernels.cpp:54:20: note: 	stmt 0 *_516 = _517;
+src/kernels.cpp:54:20: note: 	stmt 1 *_544 = _545;
+src/kernels.cpp:54:20: note: 	children 0xfc00d68
+src/kernels.cpp:54:20: note: node 0xfc00d68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _517 = _515 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 0 _517 = _515 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _545 = _543 >> 4;
+src/kernels.cpp:54:20: note: 	children 0xfc00de8 0xfc015e8
+src/kernels.cpp:54:20: note: node 0xfc00de8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _515 = _514 + _507;
+src/kernels.cpp:54:20: note: 	stmt 0 _515 = _514 + _507;
+src/kernels.cpp:54:20: note: 	stmt 1 _543 = _542 + _535;
+src/kernels.cpp:54:20: note: 	children 0xfc00e68 0xfc012e8
+src/kernels.cpp:54:20: note: node 0xfc00e68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _514 = _512 + _508;
+src/kernels.cpp:54:20: note: 	stmt 0 _514 = _512 + _508;
+src/kernels.cpp:54:20: note: 	stmt 1 _542 = _540 + _536;
+src/kernels.cpp:54:20: note: 	children 0xfc00ee8 0xfc00f68
+src/kernels.cpp:54:20: note: node 0xfc00ee8 (max_nunits=2, refcnt=2) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 0 _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 1 _540 = *_539;
+src/kernels.cpp:54:20: note: node 0xfc00f68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _508 = _501 + 8;
+src/kernels.cpp:54:20: note: 	stmt 0 _508 = _501 + 8;
+src/kernels.cpp:54:20: note: 	stmt 1 _536 = _529 + 8;
+src/kernels.cpp:54:20: note: 	children 0xfc00fe8 0xfc01268
+src/kernels.cpp:54:20: note: node 0xfc00fe8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _501 = _494 + _497;
+src/kernels.cpp:54:20: note: 	stmt 0 _501 = _494 + _497;
+src/kernels.cpp:54:20: note: 	stmt 1 _529 = _522 + _525;
+src/kernels.cpp:54:20: note: 	children 0xfc01068 0xfc010e8
+src/kernels.cpp:54:20: note: node 0xfc01068 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _494 = *_493;
+src/kernels.cpp:54:20: note: 	stmt 0 _494 = *_493;
+src/kernels.cpp:54:20: note: 	stmt 1 _522 = *_521;
+src/kernels.cpp:54:20: note: node (external) 0xfc010e8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _497 = _449 * 6;
+src/kernels.cpp:54:20: note: 	stmt 1 _525 = _477 * 6;
+src/kernels.cpp:54:20: note: 	children 0xfc01168 0xfc011e8
+src/kernels.cpp:54:20: note: node 0xfc01168 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _449 = *_448;
+src/kernels.cpp:54:20: note: 	stmt 0 _449 = *_448;
+src/kernels.cpp:54:20: note: 	stmt 1 _477 = *_476;
+src/kernels.cpp:54:20: note: node (constant) 0xfc011e8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 6, 6 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01268 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ 8, 8 }
+src/kernels.cpp:54:20: note: node (external) 0xfc012e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _507 = _506 * 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _535 = _534 * 4;
+src/kernels.cpp:54:20: note: 	children 0xfc01368 0xfc01568
+src/kernels.cpp:54:20: note: node 0xfc01368 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _506 = _421 + _477;
+src/kernels.cpp:54:20: note: 	stmt 0 _506 = _421 + _477;
+src/kernels.cpp:54:20: note: 	stmt 1 _534 = _449 + _512;
+src/kernels.cpp:54:20: note: 	children 0xfc01468 0xfc01e68
+src/kernels.cpp:54:20: note: node (external) 0xfc01468 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ _421, _512 }
+src/kernels.cpp:54:20: note: node 0xfc01e68 (max_nunits=1, refcnt=2) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op: VEC_PERM_EXPR
+src/kernels.cpp:54:20: note: 	stmt 0 _477 = *_476;
+src/kernels.cpp:54:20: note: 	stmt 1 _449 = *_448;
+src/kernels.cpp:54:20: note: 	lane permutation { 0[1] 0[0] }
+src/kernels.cpp:54:20: note: 	children 0xfc014e8
+src/kernels.cpp:54:20: note: node 0xfc014e8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _477 = *_476;
+src/kernels.cpp:54:20: note: 	stmt 0 _449 = *_448;
+src/kernels.cpp:54:20: note: 	stmt 1 _477 = *_476;
+src/kernels.cpp:54:20: note: node (constant) 0xfc01568 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc015e8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _512 = *_511;
+src/kernels.cpp:54:20: note: transform load. ncopies = 1
+src/kernels.cpp:54:20: note: create vector_type-pointer variable to type: const vector(2) unsigned int  vectorizing a pointer ref: *_511
+src/kernels.cpp:54:20: note: created vectp.199_187
+src/kernels.cpp:54:20: note: add new stmt: vect__512.200_577 = MEM <const vector(2) unsigned int> [(const uint32_t *)vectp.199_187];
+src/kernels.cpp:54:20: note: add new stmt: vectp.199_576 = vectp.199_187 + 20;
+src/kernels.cpp:54:20: note: extracting lane for live stmt _512 = *_511;
+src/kernels.cpp:54:20: note: extracting lane for live stmt _540 = *_539;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _494 = *_493;
+src/kernels.cpp:54:20: note: transform load. ncopies = 1
+src/kernels.cpp:54:20: note: create vector_type-pointer variable to type: const vector(2) unsigned int  vectorizing a pointer ref: *_493
+src/kernels.cpp:54:20: note: created vectp.202_138
+src/kernels.cpp:54:20: note: add new stmt: vect__494.203_209 = MEM <const vector(2) unsigned int> [(const uint32_t *)vectp.202_138];
+src/kernels.cpp:54:20: note: add new stmt: vectp.202_220 = vectp.202_138 + 20;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _501 = _494 + _497;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand *_493, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__501.204_236 = vect__494.203_209 + _227;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _508 = _501 + 8;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _494 + _497, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__508.205_244 = vect__501.204_236 + { 8, 8 };
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _514 = _512 + _508;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand *_511, type of def: internal
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _501 + 8, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__514.206_256 = vect__512.200_577 + vect__508.205_244;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _515 = _514 + _507;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _512 + _508, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__515.207_269 = vect__514.206_256 + _266;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _517 = _515 >> 4;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _514 + _507, type of def: internal
+src/kernels.cpp:54:20: note: vector/scalar shift/rotate found.
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: operand 1 using scalar mode.
+src/kernels.cpp:54:20: note: add new stmt: vect__517.208_270 = vect__515.207_269 >> 4;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: *_516 = _517;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _515 >> 4, type of def: internal
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _543 >> 4, type of def: internal
+src/kernels.cpp:54:20: note: transform store. ncopies = 1
+src/kernels.cpp:54:20: note: create vector_type-pointer variable to type: vector(2) unsigned int  vectorizing a pointer ref: *_516
+src/kernels.cpp:54:20: note: created vectp.210_10
+src/kernels.cpp:54:20: note: add new stmt: MEM <vector(2) unsigned int> [(uint32_t *)vectp.210_10] = vect__517.208_270;
+src/kernels.cpp:54:20: note: vectorizing stmts using SLP.
+src/kernels.cpp:54:20: optimized: basic block part vectorized using 32 byte vectors
+src/kernels.cpp:54:20: note: Vectorizing SLP tree:
+src/kernels.cpp:54:20: note: node 0xfc016e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: *_205 = _206;
+src/kernels.cpp:54:20: note: 	stmt 0 *_205 = _206;
+src/kernels.cpp:54:20: note: 	stmt 1 *_287 = _288;
+src/kernels.cpp:54:20: note: 	children 0xfc01768
+src/kernels.cpp:54:20: note: node 0xfc01768 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _206 = _204 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 0 _206 = _204 >> 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _288 = _286 >> 4;
+src/kernels.cpp:54:20: note: 	children 0xfc017e8 0xfc01fe8
+src/kernels.cpp:54:20: note: node 0xfc017e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _204 = _203 + _197;
+src/kernels.cpp:54:20: note: 	stmt 0 _204 = _203 + _197;
+src/kernels.cpp:54:20: note: 	stmt 1 _286 = _285 + _278;
+src/kernels.cpp:54:20: note: 	children 0xfc01868 0xfc01ce8
+src/kernels.cpp:54:20: note: node 0xfc01868 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _203 = _202 + _198;
+src/kernels.cpp:54:20: note: 	stmt 0 _203 = _202 + _198;
+src/kernels.cpp:54:20: note: 	stmt 1 _285 = _283 + _279;
+src/kernels.cpp:54:20: note: 	children 0xfc018e8 0xfc01968
+src/kernels.cpp:54:20: note: node 0xfc018e8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _202 = *_201;
+src/kernels.cpp:54:20: note: 	stmt 0 _202 = *_201;
+src/kernels.cpp:54:20: note: 	stmt 1 _283 = *_282;
+src/kernels.cpp:54:20: note: node 0xfc01968 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _198 = _82 + 8;
+src/kernels.cpp:54:20: note: 	stmt 0 _198 = _82 + 8;
+src/kernels.cpp:54:20: note: 	stmt 1 _279 = _272 + 8;
+src/kernels.cpp:54:20: note: 	children 0xfc019e8 0xfc01c68
+src/kernels.cpp:54:20: note: node 0xfc019e8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _82 = _165 + _161;
+src/kernels.cpp:54:20: note: 	stmt 0 _82 = _165 + _161;
+src/kernels.cpp:54:20: note: 	stmt 1 _272 = _91 + _71;
+src/kernels.cpp:54:20: note: 	children 0xfc01a68 0xfc01ae8
+src/kernels.cpp:54:20: note: node 0xfc01a68 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _165 = *_6;
+src/kernels.cpp:54:20: note: 	stmt 0 _165 = *_6;
+src/kernels.cpp:54:20: note: 	stmt 1 _91 = *_116;
+src/kernels.cpp:54:20: note: node (external) 0xfc01ae8 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _161 = _540 * 6;
+src/kernels.cpp:54:20: note: 	stmt 1 _71 = _568 * 6;
+src/kernels.cpp:54:20: note: 	children 0xfc01b68 0xfc01be8
+src/kernels.cpp:54:20: note: node 0xfc01b68 (max_nunits=2, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _540 = *_539;
+src/kernels.cpp:54:20: note: 	stmt 0 _540 = *_539;
+src/kernels.cpp:54:20: note: 	stmt 1 _568 = *_567;
+src/kernels.cpp:54:20: note: node (constant) 0xfc01be8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 6, 6 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01c68 (max_nunits=1, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ 8, 8 }
+src/kernels.cpp:54:20: note: node (external) 0xfc01ce8 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	stmt 0 _197 = _196 * 4;
+src/kernels.cpp:54:20: note: 	stmt 1 _278 = _277 * 4;
+src/kernels.cpp:54:20: note: 	children 0xfc01d68 0xfc01f68
+src/kernels.cpp:54:20: note: node 0xfc01d68 (max_nunits=2, refcnt=1) vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _196 = _512 + _568;
+src/kernels.cpp:54:20: note: 	stmt 0 _196 = _512 + _568;
+src/kernels.cpp:54:20: note: 	stmt 1 _277 = _202 + _540;
+src/kernels.cpp:54:20: note: 	children 0xfc00ee8 0xfc01ee8
+src/kernels.cpp:54:20: note: node 0xfc00ee8 (max_nunits=2, refcnt=2) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: op template: _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 0 _512 = *_511;
+src/kernels.cpp:54:20: note: 	stmt 1 _540 = *_539;
+src/kernels.cpp:54:20: note: node (external) 0xfc01ee8 (max_nunits=1, refcnt=1) const vector(2) unsigned int
+src/kernels.cpp:54:20: note: 	{ _568, _202 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01f68 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: node (constant) 0xfc01fe8 (max_nunits=1, refcnt=1)
+src/kernels.cpp:54:20: note: 	{ 4, 4 }
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _202 = *_201;
+src/kernels.cpp:54:20: note: transform load. ncopies = 1
+src/kernels.cpp:54:20: note: create vector_type-pointer variable to type: const vector(2) unsigned int  vectorizing a pointer ref: *_201
+src/kernels.cpp:54:20: note: created vectp.212_12
+src/kernels.cpp:54:20: note: add new stmt: vect__202.213_13 = MEM <const vector(2) unsigned int> [(const uint32_t *)vectp.212_12];
+src/kernels.cpp:54:20: note: add new stmt: vectp.212_14 = vectp.212_12 + 20;
+src/kernels.cpp:54:20: note: extracting lane for live stmt _202 = *_201;
+src/kernels.cpp:54:20: note: extracting lane for live stmt _283 = *_282;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _165 = *_6;
+src/kernels.cpp:54:20: note: transform load. ncopies = 1
+src/kernels.cpp:54:20: note: create vector_type-pointer variable to type: const vector(2) unsigned int  vectorizing a pointer ref: *_6
+src/kernels.cpp:54:20: note: created vectp.215_21
+src/kernels.cpp:54:20: note: add new stmt: vect__165.216_23 = MEM <const vector(2) unsigned int> [(const uint32_t *)vectp.215_21];
+src/kernels.cpp:54:20: note: add new stmt: vectp.215_24 = vectp.215_21 + 20;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _82 = _165 + _161;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand *_6, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__82.217_28 = vect__165.216_23 + _27;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _198 = _82 + 8;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _165 + _161, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__198.218_394 = vect__82.217_28 + { 8, 8 };
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _203 = _202 + _198;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand *_201, type of def: internal
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _82 + 8, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__203.219_396 = vect__202.213_13 + vect__198.218_394;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _204 = _203 + _197;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _202 + _198, type of def: internal
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: add new stmt: vect__204.220_398 = vect__203.219_396 + _397;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: _206 = _204 >> 4;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _203 + _197, type of def: internal
+src/kernels.cpp:54:20: note: vector/scalar shift/rotate found.
+src/kernels.cpp:54:20: note: transform binary/unary operation.
+src/kernels.cpp:54:20: note: operand 1 using scalar mode.
+src/kernels.cpp:54:20: note: add new stmt: vect__206.221_399 = vect__204.220_398 >> 4;
+src/kernels.cpp:54:20: note: ------>vectorizing SLP node starting from: *_205 = _206;
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _204 >> 4, type of def: internal
+src/kernels.cpp:54:20: note: vect_is_simple_use: operand _286 >> 4, type of def: internal
+src/kernels.cpp:54:20: note: transform store. ncopies = 1
+src/kernels.cpp:54:20: note: create vector_type-pointer variable to type: vector(2) unsigned int  vectorizing a pointer ref: *_205
+src/kernels.cpp:54:20: note: created vectp.223_404
+src/kernels.cpp:54:20: note: add new stmt: MEM <vector(2) unsigned int> [(uint32_t *)vectp.223_404] = vect__206.221_399;
+src/kernels.cpp:54:20: note: vectorizing stmts using SLP.
+src/kernels.cpp:54:20: optimized: basic block part vectorized using 32 byte vectors
+src/kernels.cpp:54:20: note: ***** The result for vector mode V32QI would be the same

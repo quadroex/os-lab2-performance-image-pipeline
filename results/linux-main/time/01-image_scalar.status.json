@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/usr/bin/time",
+    "--verbose",
+    "--output",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/time/01-image_scalar.time.txt",
+    "taskset",
+    "-c",
+    "0",
+    "/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_scalar",
+    "--width",
+    "2048",
+    "--height",
+    "2048",
+    "--repeats",
+    "300",
+    "--seed",
+    "12345"
+  ],
+  "shell_display": "/usr/bin/time --verbose --output /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/results/linux-main/time/01-image_scalar.time.txt taskset -c 0 /mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab/build/image_scalar --width 2048 --height 2048 --repeats 300 --seed 12345",
+  "start_epoch_seconds": 1792784730.4390814,
+  "returncode": 0,
+  "status": "ok",
+  "end_epoch_seconds": 1792784735.8350487,
+  "wrapper_elapsed_seconds": 5.395967245101929
+}
