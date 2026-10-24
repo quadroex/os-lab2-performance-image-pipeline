@@ -16,7 +16,7 @@ No energy value is attributed exactly to a PID, and no wall-plug value is claime
 param(
     [string]$Distro='Ubuntu-24.04',
     [string]$LinuxUser='root',
-    [Alias('LinuxPath')][string]$LinuxProjectPath='/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab',
+    [Alias('LinuxPath')][string]$LinuxProjectPath='/mnt/c/projects/performance-lab',
     [ValidateRange(1,100)][int]$Rounds=3,
     [ValidateRange(1,32768)][int]$Width=2048,
     [ValidateRange(1,32768)][int]$Height=2048,

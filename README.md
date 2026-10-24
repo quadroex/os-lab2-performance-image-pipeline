@@ -1,89 +1,54 @@
-# Лабораторна №2: продуктивність, FlameGraph, AVX2 та енергія
+Author: Hrytsyna Anton, Group: TTP-32
 
-Досліджується власна однопотокова C++17 програма: перетворення RGB у відтінки сірого, зміна контрасту та горизонтальне розмиття. Той самий код збирається без оптимізації, з оптимізацією та з оптимізацією без автоматичної векторизації. Усі версії мають виконувати однакову роботу й повертати однакову контрольну суму.
+# Лабораторна №2: профілювання та оптимізація програми
 
-Цей репозиторій містить код, відтворювані вимірювання й матеріали для пояснення результатів. Реальні дані збережено в `results/`; відсутні можливості обладнання позначено явно.
+У роботі порівнюю три збірки однієї програми C++17: `O0`, `O3 scalar` без автоматичної векторизації та `O3` з AVX2. Програма створює RGB-дані в пам’яті, переводить їх у відтінки сірого, змінює контраст і виконує розмиття. Дані та кількість повторень однакові; правильність перевіряється тестами й контрольною сумою.
 
-Короткий маршрут для першого ознайомлення: [START_HERE.md](START_HERE.md).
+## Код
 
-## Навігація
+- Програма: [main.cpp](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/src/main.cpp), [kernels.cpp](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/src/kernels.cpp), [kernels.hpp](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/src/kernels.hpp).
+- Команди демонстрації: [defense.py](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/scripts/linux/defense.py).
+- Збирання та ключі компілятора: [Makefile](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/Makefile).
+- Асемблер, згенерований GCC: [O0](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/results/assembly/kernels_o0.s), [O3 scalar](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/results/assembly/kernels_scalar.s), [O3 AVX2](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/results/assembly/kernels_o3.s).
+- Вимірювання енергії: [run_sync_energy_series.ps1](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/scripts/windows/run_sync_energy_series.ps1), [Measure-SynchronizedEnergy.ps1](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/scripts/windows/Measure-SynchronizedEnergy.ps1).
 
-- [Підсумковий звіт](docs/REPORT.md) — виміряні значення та їх інтерпретація.
-- [Що робить програма](docs/PROGRAM.md) — формули, дані, контроль правильності.
-- [Розбір асемблера](docs/ASSEMBLY.md) — фактичні інструкції до та після оптимізації.
-- [Сценарій захисту](docs/DEFENSE.md) — порядок демонстрації та пояснень.
-- [Методика Linux-вимірювань](scripts/linux/README.md).
-- [Джерела й походження коду](docs/SOURCES.md).
+## Запуск
 
-## Середовище цієї роботи
+Працюю в Ubuntu 24.04 через WSL2. Потрібні GCC з підтримкою AVX2, make, Python 3, GNU time, perf та Perl; для читання Windows EMI — PowerShell 7.
 
-Windows 11 Pro; Intel Core i5-10500, 6 ядер / 12 логічних процесорів, близько 32 GiB встановленої оперативної пам’яті. Linux-частина виконана в Ubuntu 24.04 через WSL2, ядро `6.6.87.2-microsoft-standard-WSL2`, компілятор GCC 13.3.0. Вимірювання однопотокові, прив’язані до логічного CPU 0 усередині WSL; це не виділяє фізичне ядро виключно програмі.
-
-Апаратні `cycles`, `instructions`, `branches`, `branch-misses`, події L1 доступні фактично. `LLC-loads` і `LLC-load-misses` тут недоступні; у сирих результатах залишено `<not supported>`. Linux powercap/RAPL через WSL не доступний. Енергію CPU package і DRAM читаємо на Windows через документований Energy Meter Interface (EMI).
-
-## Збірка та перевірка
-
-У Linux потрібні GCC/G++, GNU make, GNU time, Python 3, Perl і робочий `perf`. Для Debian/Ubuntu пакети встановлюються зі стандартних репозиторіїв. Встановлення не входить у сценарій вимірювання.
+Із папки проєкту в терміналі Ubuntu:
 
 ```bash
 make -j2 ARCH_FLAGS=-mavx2
-make test ARCH_FLAGS=-mavx2
-make assembly ARCH_FLAGS=-mavx2
-./build/image_o3 --width 2048 --height 2048 --repeats 300 --seed 12345
+alias lab='python3 scripts/linux/defense.py'
+lab prepare
+lab asm
+lab stats
+lab record
+lab report
+lab results
+lab flame
+lab open
+lab energy
+lab energy-results
 ```
 
-`-mavx2` застосовано до всіх трьох версій однаково; потрібен CPU з підтримкою AVX2. Для інших процесорів приберіть цей прапорець, перебудуйте всі бінарні файли й заново виконайте вимірювання. Опція `compiled_isa` в JSON означає дозволений набір інструкцій; наявність векторних інструкцій доводиться окремо асемблером.
+`lab` — звичайний Bash-аліас для запуску `defense.py`. Скрипт показує команди й виконує їх через `subprocess`: `stats` запускає time та perf stat, `record` записує профілі, `report` аналізує їх, а `flame` перетворює ті самі записи на SVG. Коротка демонстрація має 100 повторень; основні збережені вимірювання — 300.
 
-Варіанти:
+## Результати
 
-| Файл | Параметри оптимізації | Призначення |
-|---|---|---|
-| `build/image_o0` | `-O0` | Навчальний початковий варіант |
-| `build/image_scalar` | `-O3 -fno-tree-vectorize -fno-tree-slp-vectorize` | Контроль впливу автоматичної векторизації |
-| `build/image_o3` | `-O3` | Оптимізована версія з AVX2 |
+Навантаження: 2048×2048, 300 повторень, seed 12345. У таблиці — медіани п’яти вимірювань часу та трьох вимірювань енергії на збірку.
 
-У всіх версіях також `-g -fno-omit-frame-pointer`, без LTO та `-ffast-math`. Порівняння з `-O0` показує ефект увімкнення оптимізатора, а не перевагу над уже оптимізованою виробничою програмою.
+| Збірка | Час обчислень, с | Енергія PKG, Дж | Оцінка внеску програми в PKG, Дж |
+|---|---:|---:|---:|
+| O0 | 15,85 | 486,97 | 239,13 |
+| O3 scalar | 6,05 | 188,85 | 69,60 |
+| O3 | 2,89 | 99,27 | 57,54 |
 
-## Повторення вимірювань Linux
+O3 виконав ту саму роботу приблизно у 5,48 раза швидше. Енергія процесорного пакета зменшилася приблизно на 80%.
 
-```bash
-bash scripts/linux/fetch_flamegraph.sh
-python3 scripts/linux/run_lab.py check
-python3 scripts/linux/run_lab.py collect \
-  --width 2048 --height 2048 --repeats 300 \
-  --profile-repeats 300 --runs 5 --cpu 0
-```
+Через EMI вимірюю енергію процесорного пакета PKG та пам’яті DRAM. Внесок програми оцінюю як `E_active − P_idle × T_active`. Це оцінка після віднімання фону, а не прямий лічильник процесу чи вимірювання всього ПК з розетки.
 
-На цьому WSL пакетний `/usr/bin/perf` є оболонкою, що шукає версію для ядра. Скрипт знаходить фактичний виконуваний файл. За потреби задайте явно:
+Сирі дані: [time, perf і FlameGraph](https://github.com/quadroex/os-lab2-performance-image-pipeline/tree/main/results/linux-main), [енергія PKG/DRAM](https://github.com/quadroex/os-lab2-performance-image-pipeline/tree/main/results/energy-sync-host-20261023T195827031Z). Походження інструментів і матеріалів наведено в [джерелах](https://github.com/quadroex/os-lab2-performance-image-pipeline/blob/main/docs/SOURCES.md).
 
-```bash
-export PERF=/usr/lib/linux-tools/6.8.0-147-generic/perf
-```
-
-Профілювання використовує однакову подію `cpu-clock:u`, частоту 199 Гц і DWARF-стеки для всіх версій. Профілі, `time`, `perf stat` та енергетичні вимірювання запускаються окремо, щоб не змішувати витрати інструментів. Скрипт не змінює права доступу, політики безпеки, частоти процесора чи чужі процеси.
-
-Великі двійкові `perf.data` і готові бінарні файли залишено локально; вони не додаються до Git. У репозиторії зберігаються сирі текстові результати, стеки, folded-файли, SVG та команди для повторного створення записів. Для побудови підсумкового графіка зі збережених даних використовується `scripts/analyze_results.py`; необов’язкова залежність для рисунка вказана в `requirements-report.txt`.
-
-У збереженому форматі `perf script` є поле періоду: числа у `stacks.folded` — суми цих ваг, для CPU-clock у наносекундах. Це не кількість семплів. Точна кількість семплів міститься у `record.stderr.txt` і таблицях `perf report`. Кожен FlameGraph нормує ширину на власну суму ваг; абсолютний час порівнюється окремо.
-
-## Вимірювання енергії з Windows
-
-PowerShell 7 запускає справжню Linux-програму через WSL і читає наявні лічильники Windows EMI. Скрипти не встановлюють драйвери й не змінюють налаштування живлення.
-
-```powershell
-./scripts/windows/run_sync_energy_series.ps1 `
-  -LinuxProjectPath '/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab' `
-  -Distro Ubuntu-24.04 -Repeats 300 -Rounds 3
-```
-
-Основна серія використовує протокол `READY → GO → DONE → ACK → RESULT`: Linux спершу повідомляє про готовність, потім Windows знімає початкові лічильники й дозволяє запуск. Наприкінці Linux чекає підтвердження, доки Windows не прочитає кінцеві лічильники. Так запуск і завершення WSL не входять у вікно енергії. У ньому залишаються весь процес програми (включно з підготовкою даних і checksum) та невеликі витрати обгортки, каналів зв’язку й датчиків.
-
-CPU package і DRAM — виміряні апаратні домени. `PP0` і `PP1` входять до package, тому їх не додають до PKG. Оцінка внеску запуску `E_active − P_idle × T_active` припускає порівнянний фоновий режим. Це **не точне вимірювання енергії окремого PID**. Старий `run_energy_series.ps1` зберігається як діагностичний варіант із включеним запуском WSL; його дані не використовуються як основне порівняння.
-
-**Споживання всього комп’ютера з розетки не виміряне.** Для цього потрібні дані зовнішнього вимірювача; підготовлено `scripts/linux/import_wattmeter.py` для інтегрування справжніх часових рядів потужності. Невідоме споживання GPU, накопичувачів, плати й втрати блока живлення не замінюється вигаданими числами.
-
-## Захист і здача
-
-Для захисту слід показати побудову FlameGraph, пояснити статистику, асемблер, SIMD і енергетичну методику. Підготовлений сценарій — у `docs/DEFENSE.md`. Репозиторій сам по собі не замінює захист.
-
-За умовою потрібні GitHub-посилання та відео з екраном, камерою й озвученням або особистий захист. Відео з участю студента й фінальне прикріплення в Classroom ще мають бути виконані. Якщо репозиторій приватний, викладачу потрібно надати доступ до перегляду.
+Під час підготовки коду, навчання та для кращого розуміння теми я використовував штучний інтелект (Codex). Підтверджую, що опанував тему лабораторної роботи й можу пояснити код, виконані вимірювання та отримані результати.

@@ -9,3 +9,13 @@ perf.data*
 *.zip
 third_party/FlameGraph/
 tools/FlameGraph/
+.vscode/
+START_HERE.md
+docs/*
+!docs/SOURCES.md
+scripts/linux/README.md
+scripts/linux/import_wattmeter.py
+scripts/windows/Measure-Energy.ps1
+scripts/windows/run_energy_series.ps1
+results/energy-host-*/
+results/verification.json

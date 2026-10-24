@@ -12,7 +12,7 @@ Energy is hardware-domain energy, not whole-PC or exact per-PID energy.
 param(
     [string]$Distro='Ubuntu-24.04',
     [string]$LinuxUser='root',
-    [string]$LinuxProjectPath='/mnt/q/Documents/CodexFiles/2026-10-23/x20/outputs/performance-lab',
+    [string]$LinuxProjectPath='/mnt/c/projects/performance-lab',
     [Parameter(Mandatory)][string[]]$TargetArguments,
     [string]$Label='',
     [ValidateRange(0,300)][double]$SettleSeconds=5,
